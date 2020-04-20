@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.btn-book .icon {
+  opacity: 0.6;
+  background: url("../images/book.svg") 0 0 no-repeat;
+}
+
+.btn-github .icon {
+  opacity: 0.6;
+  background: url("../images/github.svg") 0 0 no-repeat;
+}
