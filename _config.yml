@@ -5,3 +5,5 @@ show_downloads: false
 google_analytics: UA-142154492-3
 
 theme: jekyll-theme-hacker
+
+markdown: kramdown
