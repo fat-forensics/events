@@ -199,7 +199,7 @@ minutes break.
     <tr>
       <td style="text-align: left">30 minutes</td>
       <td style="text-align: left">Break. We will use this time to help resolve any individual issues with the software setup.</td>
-      <td style="text-align: left">Kacper Sokol and Alexander Hepburn</td>
+      <td style="text-align: left">Kacper Sokol and Alex Hepburn</td>
     </tr>
   </tbody>
 </table>
@@ -229,7 +229,7 @@ the `FAT Forensics` package.
 </dl>
 
 ### Alexander Hepburn ###
-Alex is a second-year PhD student at the University of Bristol. His research is
+Alex is a third-year PhD student at the University of Bristol. His research is
 based on including user-defined prior information in loss functions to improve
 human perceptual systems and cost sensitive learning, mainly applied to deep
 learning. Alex is a core developer of the `FAT Forensics` package.
