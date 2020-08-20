@@ -1,8 +1,12 @@
 title: FAT Forensic Events
-description: Hands-on Tutorial on ML Transparency with FAT Forensics.
+description: Hands-on Tutorial on Explainable ML with FAT Forensics
 
 show_downloads: false
 google_analytics: UA-142154492-3
+
+fatf:
+  github: https://github.com/fat-forensics/fat-forensics
+  docs: https://fat-forensics.org/
 
 theme: jekyll-theme-hacker
 
