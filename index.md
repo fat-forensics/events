@@ -19,33 +19,39 @@ https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hand
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Where</td>
-      <td style="text-align: left"><b>Virtual</b>, through the ECML-PKDD 2020 conference, Ghent, Belgium</td>
+      <td style="text-align: left">Where:</td>
+      <td style="text-align: left"><b>Virtual</b>, through the ECML-PKDD 2020 conference, Ghent, Belgium.</td>
     </tr>
     <tr>
-      <td style="text-align: left">When</td>
-      <td style="text-align: left">Friday, September 18<sup>th</sup>, 2020</td>
+      <td style="text-align: left">When:</td>
+      <td style="text-align: left">Friday, September 18<sup>th</sup>, 2020.</td>
     </tr>
     <tr>
-      <td style="text-align: left">What time</td>
-      <td style="text-align: left"><a href="https://www.thetimezoneconverter.com/?t=2%3A00%20pm&tz=CEST%20(Central%20European%20Summer%20Time)">2pm&ndash;6pm CEST</a></td>
+      <td style="text-align: left">What time:</td>
+      <td style="text-align: left"><a href="https://www.thetimezoneconverter.com/?t=2%3A00%20pm&tz=CEST%20(Central%20European%20Summer%20Time)">2pm&ndash;6pm CEST</a>.</td>
     </tr>
     <tr>
-      <td style="text-align: left">How to access</td>
-      <td style="text-align: left"><b>Zoom</b> &ndash; the link is accessible via the Whova app and the ECML-PKDD website
-                                   <br>(The recordings will be made available after the event)</td>
+      <td style="text-align: left">Tutorial access:</td>
+      <td style="text-align: left"><b>Zoom</b> &ndash; the link is accessible via the Whova app and the ECML-PKDD website.
+                                   <br>(The recordings will be made available after the event.)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Discussion&nbsp;access:</td>
+      <td style="text-align: left"><a href="https://fatforensicsevents.slack.com"><b>Slack</b></a> &ndash; the workspace <i>sign-up</i> link is accessible via the Whova app and the ECML-PKDD website.</td>
     </tr>
   </tbody>
 </table>
 
 > **If you wish to prepare for the hands-on exercises beforehand (highly
-  recommended), please have a look at the slides corresponding to the "Hands-on
+  recommended), please have a look at the slides corresponding to the "hands-on
   session preparation" section of
-  [Part 2](#part-2-introduction-to-fat-forensics) of the tutorial.
-  They explain different ways to participate, including installation of the
-  Python package and download of the Jupyter Notebooks on your own machine;
-  executing the notebooks online via Google Colab (a Google account is
-  required); and running the notebooks via My Binder directly in the browser.**
+  [Part 2](#part-2-getting-to-know-fat-forensics) of the tutorial.
+  They explain different ways to participate:**
+  * **installing the Python package and downloading the Jupyter Notebooks on
+    your own machine;**
+  * **executing the notebooks online via Google Colab (a Google account is
+    required); and**
+  * **running the notebooks via My Binder directly in the browser.**
 
 ## Table of Content ##
 {:.no_toc}
@@ -64,11 +70,11 @@ In this hands-on tutorial we:
   well-known failure points.
 
 In particular, we focus on surrogate explainers such as
-*Local Interoperable Model-agnostic Explanations* (LIME[^1]).
-They are *model-agnostic*, *post-hoc* and compatible with an diverse
+*Local Interpretable Model-agnostic Explanations* (LIME[^1]).
+They are *model-agnostic*, *post-hoc* and compatible with a diverse
 *range of data types* -- image, text and tabular -- making them a popular
 choice for explaining black-box predictions.
-We build on this ubiquity and teach participants how to improve upon such
+We embrace this ubiquity and teach participants how to improve upon such
 off-the-shelf solutions by taking advantage of the aforementioned modularity.
 In particular, we demonstrate how to harness it to compose a suite of bespoke
 transparency forensic tools for black-box models and their predictions.
@@ -80,7 +86,7 @@ This structure supports two distinct goals: **research & development** as well
 as **deployment** of such tools.
 The hands-on part of the tutorial, therefore, walks the attendees through
 *building* and *validating* their own, tailor-made, *transparency techniques*
-in the context of surrogate explainers of tabular data.
+in the context of surrogate explainers designated for tabular data.
 For example, it demonstrates how choosing their three core modules[^3] --
 interpretable data representation, data sampling and explanation generation --
 influences the type and quality of the resulting explanations of black-box
@@ -88,14 +94,14 @@ predictions.
 These programming exercises are delivered using
 [`FAT Forensics`](https://fat-forensics.org/)[^2][^4] -- a Python toolbox
 open-sourced under the BSD 3-Clause license and designed for inspecting
-Fairness, Accountability and Transparency (FAT) of data, models and
+Fairness, Accountability and Transparency (FAT) aspects of data, models and
 predictions.
 
 ## Motivation ##
 Many public-domain implementations of transparency, interpretability and
 explainability (TIE) algorithms are a result of academic research projects.
-The development of these tools, therefore, usually starts with a particular
-research goal in mind, such as demonstrating the capabilities of a proposed
+As such, the development of these tools usually starts with a particular
+research goal in mind, e.g., demonstrating the capabilities of a proposed
 method.
 In practice, this often means that the software is engineered without an
 elaborate design, which tends to be detrimental for its reusability and
@@ -131,14 +137,15 @@ collection of algorithms that can be used by technical users -- researchers and
 developers -- to compose their own bespoke explainers.
 Additionally, we use these components to build popular and easy to use TIE
 algorithms as part of the API targeted at a lay audience.
-This modular software design is embodied in an open source Python package,
-which we released to improve and advance reproducibility of TIE algorithms and
-provide native access to their vital components.
+This modular software design is embodied in an open source Python package --
+[`FAT Forensics`](https://fat-forensics.org/) -- which we released to improve
+and advance reproducibility of TIE algorithms and provide native access to
+their vital components.
 
-&nbsp;&nbsp;&nbsp;Academics can gain insights into experimenting with the
-algorithmic design and building blocks of state-of-the-art explainers -- a
-perspective that is uncommon among other educational resources in this space,
-which simply show how to apply such tools.
+&nbsp;&nbsp;&nbsp;By participating in this tutorial, academics can gain
+insights into experimenting with the algorithmic design and building blocks of
+state-of-the-art explainers -- a perspective that is uncommon among other
+educational resources in this space, which simply show how to apply such tools.
 Attendees from industry, on the other hand, can learn to build and tune
 bespoke explainers of black-box machine learning models and their predictions
 to meet their business needs, e.g., improve transparency of deployed predictive
@@ -154,7 +161,7 @@ avoid possible pitfalls of using off-the-shelf solutions.
 To support the goals of our hands-on tutorial, we employ
 [`FAT Forensics`](https://fat-forensics.org/) -- an open source Python package
 that can inspect selected fairness, accountability and **transparency** aspects
-of *data* (and their features), *models* and *predictions*.
+of data (and their features), *models* and *predictions*.
 The toolbox spans all of the FAT domains because many of them share underlying
 algorithmic components that can be reused in multiple different
 implementations, often across the FAT borders.
@@ -166,7 +173,7 @@ The *modular* architecture[^2][^4] enables
 [`FAT Forensics`](https://fat-forensics.org/) to deliver robust and tested
 low-level FAT building blocks as well as a collection of FAT tools built on top
 of them.
-Users can choose from these ready-made tools or alternatively combine the
+Users can choose from these ready-made tools or, alternatively, combine the
 available building blocks to create their own bespoke algorithms without the
 need of modifying the code base.
 
@@ -178,9 +185,10 @@ prototyping and exploratory analysis.
 This mode is intended for FAT researchers who can use it to propose new
 fairness metrics, compare them with the existing ones or use them to inspect a
 new system or data set.
-The *deployment mode* (data in -- data out) can be used to incorporate FAT
-functionality into a data processing pipeline to provide a (numerical)
-analytics and supports any kind of automated reporting or dashboarding.
+The *deployment mode* (data in -- data out), on the other hand, can be used to
+incorporate FAT functionality into a data processing pipeline to provide a
+(numerical) analytics or become the foundation of any kind of automated
+reporting and dashboarding.
 This mode is intended for machine learning engineers and data scientists who
 may use it to monitor or evaluate a predictive system during its development
 and deployment.
@@ -208,11 +216,11 @@ users and applications, and consists of:
   (recommended) or
   [Google Colab](https://colab.research.google.com/github/fat-forensics/fat-forensics-doc/blob/master/)
   (the notebook browser is not very intuitive and an extra cell with the
-  `!pip install fat-forensics[all]` command needs to be appended at the top).
+  `!pip install fat-forensics[all]` command needs to be inserted at the top).
 
 ## Schedule and Resources ##
 The tutorial is 4-hour long, including a 30-minute break.
-The first part -- 1 hour and 30 minutes -- introduces popular transparency,
+The first part -- 1 hour and 15 minutes -- introduces popular transparency,
 explainability and interpretability approaches.
 It focuses on surrogate explainers of tabular data, discussing their pros, cons
 and modularisation.
@@ -228,7 +236,7 @@ sets and Jupyter Notebooks for attendees who could not complete these tasks
 beforehand.
 Next, we take a 30-minute break during which we help participants to resolve
 any technical difficulties and setup issues.
-The final part -- 1 hour and 30 minutes -- is devoted to hands-on exercises:
+The final part -- 1 hour and 45 minutes -- is devoted to hands-on exercises:
 * investigating predictions of black-box models by building bespoke surrogate
   explainers for tabular data;
 * using surrogate-based feature importance and attribution methods; and
@@ -236,7 +244,7 @@ The final part -- 1 hour and 30 minutes -- is devoted to hands-on exercises:
 
 *A more detailed outline of the tutorial is presented below.*
 
-> **Tutorial slides, hands-on resources and a link to a discussion board via
+> **Tutorial slides, hands-on resources and a link to a Slack workspace via
   which we will provide help during the hands-on exercises will be listed in
   the itemised schedule below in early September.
   A link to the tutorial recording will be posted here in early October.**
@@ -244,12 +252,12 @@ The final part -- 1 hour and 30 minutes -- is devoted to hands-on exercises:
 ### Part 1: Identifying Modules of Black-box Explainers ###
 Introduction to *modular* machine learning transparency, explainability and
 interpretability through a lens of surrogate explainers for tabular data -- 1
-hour and 30 minutes in total.
+hour and 15 minutes in total.
 
 | Duration | Activities | Instructor | Resources |
 |:---------|:-----------|:-----------|:---------:|
-| 2.00pm CEST<br>(15&nbsp;minutes) | Background and motivation of research on modular explainers. | Peter&nbsp;Flach | ~~slides~~ |
-| 2.15pm CEST<br>(75&nbsp;minutes) | What and how of modular interpretability: a case study of bespoke surrogate explainers for tabular data. | Kacper&nbsp;Sokol | ~~slides~~ |
+| 2.00pm CEST<br>(15&nbsp;minutes) | *Background and motivation* of research on modular explainers. | Peter&nbsp;Flach | ~~slides~~ |
+| 2.15pm CEST<br>(60&nbsp;minutes) | *What and how of modular interpretability*: a case study of bespoke surrogate explainers for tabular data. | Kacper&nbsp;Sokol | ~~slides~~ |
 
 ### Part 2: Getting to Know FAT Forensics ###
 Introduction to hands-on machine learning interpretability with
@@ -267,35 +275,35 @@ exercises -- 30 minutes in session and a 30-minutes break.
   </thead>
   <tbody>
     <tr>
+      <td style="text-align: left">3.15pm CEST<br>(15&nbsp;minutes)</td>
+      <td style="text-align: left"><i>Introduction to open source interpretability tools</i> using the example of <code>FAT Forensics</code> &ndash; promises and perils of modular research software.</td>
+      <td style="text-align: left">Alex&nbsp;Hepburn</td>
+      <td style="text-align: center"><del>slides</del></td>
+    </tr>
+    <tr>
       <td style="text-align: left">3.30pm CEST<br>(15&nbsp;minutes)</td>
-      <td style="text-align: left">Introduction to open source interpretability tools using the example of <code>FAT Forensics</code> &ndash; promises and perils of modular research software.</td>
+      <td style="text-align: left"><i>Hands-on session preparation</i>. Setting up the package on a personal machine and experimenting with it online: My Binder and Google Colab. Overview of <code>FAT Forensics</code>&apos; API documentation, online tutorials and how-to guides.</td>
       <td style="text-align: left">Alex&nbsp;Hepburn</td>
       <td style="text-align: center"><del>slides</del></td>
     </tr>
     <tr>
-      <td style="text-align: left">3.45pm CEST<br>(15&nbsp;minutes)</td>
-      <td style="text-align: left"><i>Hands-on session preparation.</i> Setting up the package on a personal machine and experimenting with it online: My Binder and Google Colab. Overview of <code>FAT Forensics</code>&apos; API documentation, online tutorials and how-to guides.</td>
-      <td style="text-align: left">Alex&nbsp;Hepburn</td>
-      <td style="text-align: center"><del>slides</del></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">4.00pm CEST<br>(30&nbsp;minutes)</td>
-      <td style="text-align: left">Break. (An opportunity to resolve any individual issues with the software setup encountered by participants.)</td>
+      <td style="text-align: left">3.45pm CEST<br>(30&nbsp;minutes)</td>
+      <td style="text-align: left"><i>Break</i>. (An opportunity to resolve any individual issues with the software setup encountered by participants.)</td>
       <td style="text-align: left">Kacper&nbsp;Sokol<br>&amp;&nbsp;Alex&nbsp;Hepburn</td>
-      <td style="text-align: center"><del>discussion board</del></td>
+      <td style="text-align: center"><a href="https://fatforensicsevents.slack.com"><b>Slack</b></a></td>
     </tr>
   </tbody>
 </table>
 
 ### Part 3: Building Bespoke Surrogate Explainers (Hands-on) ###
 Hands-on transparency with bespoke surrogate explainers for tabular data built
-from interoperable algorithmic modules -- 1 hour and 30 minutes in total.
+from interoperable algorithmic modules -- 1 hour and 45 minutes in total.
 
 | Duration | Activities | Instructor | Resources |
 |:---------|:-----------|:-----------|:---------:|
-| 4.30pm CEST<br>(15&nbsp;minutes) | Introduction to the hands-on resources and overview of the Jupyter Notebooks. | Alex Hepburn | ~~slides~~ |
-| 4.45pm CEST<br>(60&nbsp;minutes) | Active participation facilitated by the instructors. Building bespoke surrogate explainers of black-box predictions for tabular data -- trade-offs associated with choosing particular algorithmic components when building surrogate explainers[^3]. | Kacper Sokol<br>&amp;&nbsp;Alex Hepburn | ~~Jupyter<br>Notebooks~~ |
-| 5.45pm CEST<br>(15&nbsp;minutes) | Summary and farewell. | Raul Santos-Rodriguez | ~~slides~~ |
+| 4.15pm CEST<br>(15&nbsp;minutes) | *Introduction to the hands-on resources* and overview of the Jupyter Notebooks. | Alex Hepburn | ~~slides~~ |
+| 4.30pm CEST<br>(75&nbsp;minutes) | *Active participation* facilitated by the instructors: **bring your own data**. Building bespoke surrogate explainers of black-box predictions for tabular data -- trade-offs associated with choosing particular algorithmic components when building surrogate explainers[^3]. | Kacper Sokol<br>&amp;&nbsp;Alex Hepburn | ~~Jupyter<br>Notebooks~~<br>[**Slack**](https://fatforensicsevents.slack.com) |
+| 5.45pm CEST<br>(15&nbsp;minutes) | *Summary and farewell*. | Raul Santos-Rodriguez | ~~slides~~ |
 
 ## Instructors ##
 
