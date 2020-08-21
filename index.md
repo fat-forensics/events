@@ -42,8 +42,8 @@ https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hand
   </tbody>
 </table>
 
-> **If you wish to prepare for the hands-on exercises beforehand (highly
-  recommended), please have a look at the slides corresponding to the "hands-on
+> **We strongly suggest participants prepare for the hands-on exercises beforehand. 
+  Please have a look at the slides corresponding to the "hands-on
   session preparation" section of
   [Part 2](#part-2-getting-to-know-fat-forensics) of the tutorial.
   They explain different ways to participate:**
@@ -53,7 +53,7 @@ https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hand
     required); and**
   * **running the notebooks via My Binder directly in the browser.**
 
-## Table of Content ##
+## Table of Contents ##
 {:.no_toc}
 
 * TOC
@@ -69,7 +69,7 @@ In this hands-on tutorial we:
 * demonstrate how to use these components to (re)build robust explainers with
   well-known failure points.
 
-In particular, we focus on surrogate explainers such as
+In particular, we focus on popular surrogate explainers such as
 *Local Interpretable Model-agnostic Explanations* (LIME[^1]).
 They are *model-agnostic*, *post-hoc* and compatible with a diverse
 *range of data types* -- image, text and tabular -- making them a popular
@@ -219,7 +219,7 @@ users and applications, and consists of:
   `!pip install fat-forensics[all]` command needs to be inserted at the top).
 
 ## Schedule and Resources ##
-The tutorial is 4-hour long, including a 30-minute break.
+The tutorial lasts for 4 hours, including a 30-minute break.
 The first part -- 1 hour and 15 minutes -- introduces popular transparency,
 explainability and interpretability approaches.
 It focuses on surrogate explainers of tabular data, discussing their pros, cons
@@ -348,9 +348,10 @@ healthcare, remote sensing and music information retrieval.
 ### Peter Flach ###
 Peter is a Professor of Artificial Intelligence at the University of Bristol.
 His research interests include mining highly structured data, the evaluation
-and improvement of machine learning models, and human-centred AI. Peter is
-Editor-in-Chief of the Machine Learning journal, President of the European
-Association for Data Science, and author of several books including "Machine
+and improvement of machine learning models, and human-centred AI. Peter 
+recently stepped down as Editor-in-Chief of the Machine Learning journal, 
+is President of the European Association for Data Science, and has 
+published several books including "Machine
 Learning: The Art and Science of Algorithms that Make Sense of Data"
 (Cambridge University Press, 2012).
 
