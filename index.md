@@ -7,6 +7,27 @@ layout: custom
 ### Building Bespoke Explainability Tools with Interoperable Algorithmic Components ###
 {:.no_toc}
 
+<center>
+  <div style="text-align: center; width: 75%">
+  <hr>
+  Next session: <b style="color: #b5e853; font-size: 16px;">
+Part 1.1: Background and Motivation
+<!--Part 1.2: What and How of Modular Interpretability-->
+<!--Part 2.1: Introduction to Open Source Interpretability Tools-->
+<!--Part 2.2: Hands-on Session Preparation-->
+<!--Part 2.3: Break-->
+<!--Part 3.1: Introduction to the Hands-on Resources-->
+<!--Part 3.2: Active Participation-->
+<!--Part 3.3: Summary and Farewell-->
+  </b>
+  <br>
+  In: <b><div id="countdown" style="display: inline-block; color: #b5e853; font-size: 22px;"></div></b>
+  <hr>
+  </div>
+</center>
+
+<br>
+
 <!--
 https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hands-on%20Tutorial&iso=20200918T14&p1=1246&ah=4
 -->
@@ -32,20 +53,22 @@ https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hand
     </tr>
     <tr>
       <td style="text-align: left">Tutorial access:</td>
-      <td style="text-align: left"><b>Zoom</b> &ndash; the link is accessible via the Whova app and the ECML-PKDD website.
-                                   <br>(The recordings will be made available after the event.)</td>
+      <td style="text-align: left"><b>Zoom</b> &ndash; the webinar URL is <i>only</i> accessible via the Whova app and the ECML-PKDD website (ECML-PKDD 2020 attendees).
+                                   <br>The recordings will be made available after the event.</td>
     </tr>
     <tr>
       <td style="text-align: left">Discussion&nbsp;access:</td>
-      <td style="text-align: left"><a href="https://fatforensicsevents.slack.com"><b>Slack</b></a> &ndash; the workspace <i>sign-up</i> link is accessible via the Whova app and the ECML-PKDD website.</td>
+      <td style="text-align: left"><a href="https://fatforensicsevents.slack.com"><b>Slack</b></a> &ndash; the workspace <i>sign-up</i> link is only accessible via the Whova app and the ECML-PKDD website (ECML-PKDD 2020 attendees).</td>
     </tr>
   </tbody>
 </table>
 
-> **We strongly suggest participants prepare for the hands-on exercises beforehand. 
+> **We strongly suggest participants prepare for the hands-on exercises
+  beforehand.
   Please have a look at the slides corresponding to the "hands-on
   session preparation" section of
-  [Part 2](#part-2-getting-to-know-fat-forensics) of the tutorial.
+  [Part 2](#part-2-getting-to-know-fat-forensics) of the tutorial and the
+  [notebooks page]({{ site.notebooks }}).
   They explain different ways to participate:**
   * **installing the Python package and downloading the Jupyter Notebooks on
     your own machine;**
@@ -284,7 +307,7 @@ exercises -- 30 minutes in session and a 30-minutes break.
       <td style="text-align: left">3.30pm CEST<br>(15&nbsp;minutes)</td>
       <td style="text-align: left"><i>Hands-on session preparation</i>. Setting up the package on a personal machine and experimenting with it online: My Binder and Google Colab. Overview of <code>FAT Forensics</code>&apos; API documentation, online tutorials and how-to guides.</td>
       <td style="text-align: left">Alex&nbsp;Hepburn</td>
-      <td style="text-align: center"><del>slides</del></td>
+      <td style="text-align: center"><b><a href="{{ site.notebooks }}">setup</a></b><br>&<br><del>slides</del></td>
     </tr>
     <tr>
       <td style="text-align: left">3.45pm CEST<br>(30&nbsp;minutes)</td>
@@ -302,8 +325,8 @@ from interoperable algorithmic modules -- 1 hour and 45 minutes in total.
 | Duration | Activities | Instructor | Resources |
 |:---------|:-----------|:-----------|:---------:|
 | 4.15pm CEST<br>(15&nbsp;minutes) | *Introduction to the hands-on resources* and overview of the Jupyter Notebooks. | Alex Hepburn | ~~slides~~ |
-| 4.30pm CEST<br>(75&nbsp;minutes) | *Active participation* facilitated by the instructors: **bring your own data**. Building bespoke surrogate explainers of black-box predictions for tabular data -- trade-offs associated with choosing particular algorithmic components when building surrogate explainers[^3]. | Kacper Sokol<br>&amp;&nbsp;Alex Hepburn | ~~Jupyter<br>Notebooks~~<br>[**Slack**](https://fatforensicsevents.slack.com) |
-| 5.45pm CEST<br>(15&nbsp;minutes) | *Summary and farewell*. | Raul Santos-Rodriguez | ~~slides~~ |
+| 4.30pm CEST<br>(80&nbsp;minutes) | *Active participation* facilitated by the instructors: **bring your own data**. Building bespoke surrogate explainers of black-box predictions for tabular data -- trade-offs associated with choosing particular algorithmic components when building surrogate explainers[^3]. | Kacper Sokol<br>&amp;&nbsp;Alex Hepburn | **[Jupyter<br>Notebooks]({{ site.notebooks }})**<br>&<br>[**Slack**](https://fatforensicsevents.slack.com) |
+| 5.50pm CEST<br>(10&nbsp;minutes) | *Summary and farewell*. | Raul Santos-Rodriguez | ~~slides~~ |
 
 ## Instructors ##
 
@@ -348,9 +371,9 @@ healthcare, remote sensing and music information retrieval.
 ### Peter Flach ###
 Peter is a Professor of Artificial Intelligence at the University of Bristol.
 His research interests include mining highly structured data, the evaluation
-and improvement of machine learning models, and human-centred AI. Peter 
-recently stepped down as Editor-in-Chief of the Machine Learning journal, 
-is President of the European Association for Data Science, and has 
+and improvement of machine learning models, and human-centred AI. Peter
+recently stepped down as Editor-in-Chief of the Machine Learning journal,
+is President of the European Association for Data Science, and has
 published several books including "Machine
 Learning: The Art and Science of Algorithms that Make Sense of Data"
 (Cambridge University Press, 2012).
@@ -386,3 +409,48 @@ Learning: The Art and Science of Algorithms that Make Sense of Data"
       Forensics: A Python Toolbox for Algorithmic Fairness, Accountability and
       Transparency. arXiv preprint arXiv:1909.05167.
       <https://arxiv.org/abs/1909.05167>
+
+<script>
+// Set the date we're counting down to
+var eventDate = new Date("Sep 18, 2020 14:00:00")  // Part 1.1
+// var eventDate = new Date("Sep 18, 2020 14:15:00")  // Part 1.2
+// var eventDate = new Date("Sep 18, 2020 15:15:00")  // Part 2.1
+// var eventDate = new Date("Sep 18, 2020 15:30:00")  // Part 2.2
+// var eventDate = new Date("Sep 18, 2020 15:45:00")  // Part 2.3
+// var eventDate = new Date("Sep 18, 2020 16:15:00")  // Part 3.1
+// var eventDate = new Date("Sep 18, 2020 16:30:00")  // Part 3.2
+// var eventDate = new Date("Sep 18, 2020 17:50:00")  // Part 3.3
+
+// eventDate is in the local timezione
+var timezoneOffset = eventDate.getTimezoneOffset() * 60 * 1000;
+// CEST is 120 minutes ahead of UTC
+const CESTcorrection = 120 * 60 * 1000;
+
+var countDownDateUTC = eventDate.getTime() - timezoneOffset - CESTcorrection;
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var nowUTC = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDateUTC - nowUTC;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m ";  // + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);  // 1000
+</script>

@@ -8,6 +8,10 @@ fatf:
   github: https://github.com/fat-forensics/fat-forensics
   docs: https://fat-forensics.org/
 
+notebooks: https://github.com/fat-forensics/events/tree/master/resources/2020_ecml-pkdd/notebooks/
+slides: https://github.com/fat-forensics/events/tree/master/resources/2020_ecml-pkdd/slides/
+slack: https://fatforensicsevents.slack.com/
+
 theme: jekyll-theme-hacker
 
 markdown: kramdown
