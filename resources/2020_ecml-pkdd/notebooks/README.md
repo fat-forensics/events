@@ -82,10 +82,18 @@ $ git clone https://github.com/fat-forensics/events.git
 ### Google Colab ###
 To run the notebooks in your browser with Google Colab click the button below
 and select the desired notebook from the list (a Google account is required).
+**Beware that any changes you make will not be saved unless you click the
+`Copy to Drive` button (visible at the top) and open your Google Drive
+copy of the notebook in a new tab when prompted.**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fat-forensics/events/blob/master/)
 
 ### My Binder ###
 To run the notebooks in your browser with My Binder click the button below.
+Then, you need to navigate to the `resources/2020_ecml-pkdd/notebooks/`
+directory.
+**Beware that any changes you make will not be saved unless you download
+the notebook that you are working on (use the `File -> Download as -> Notebook`
+menu option in Binder).**
 
 [![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fat-forensics/events/master)
