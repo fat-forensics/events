@@ -58,7 +58,7 @@ https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hand
     </tr>
     <tr>
       <td style="text-align: left">Discussion&nbsp;access:</td>
-      <td style="text-align: left"><a href="https://fatforensicsevents.slack.com"><b>Slack</b></a> &ndash; the workspace <i>sign-up</i> link is only accessible via the Whova app and the ECML-PKDD website (ECML-PKDD 2020 attendees).</td>
+      <td style="text-align: left"><a href="{{ site.slack }}"><b>Slack</b></a> &ndash; the workspace <i>sign-up</i> link is only accessible via the Whova app and the ECML-PKDD website (ECML-PKDD 2020 attendees).</td>
     </tr>
   </tbody>
 </table>
@@ -279,8 +279,8 @@ hour and 15 minutes in total.
 
 | Duration | Activities | Instructor | Resources |
 |:---------|:-----------|:-----------|:---------:|
-| 2.00pm CEST<br>(15&nbsp;minutes) | *Background and motivation* of research on modular explainers. | Peter&nbsp;Flach | ~~slides~~ |
-| 2.15pm CEST<br>(60&nbsp;minutes) | *What and how of modular interpretability*: a case study of bespoke surrogate explainers for tabular data. | Kacper&nbsp;Sokol | ~~slides~~ |
+| 2.00pm CEST<br>(15&nbsp;minutes) | *Background and motivation* of research on modular explainers. | Peter&nbsp;Flach | [**slides**]({{ "1.1-intro.pdf" | prepend: site.slides }}) |
+| 2.15pm CEST<br>(60&nbsp;minutes) | *What and how of modular interpretability*: a case study of bespoke surrogate explainers for tabular data. | Kacper&nbsp;Sokol | [**slides**]({{ "1.2-surrogates.pdf" | prepend: site.slides }}) |
 
 ### Part 2: Getting to Know FAT Forensics ###
 Introduction to hands-on machine learning interpretability with
@@ -301,19 +301,19 @@ exercises -- 30 minutes in session and a 30-minutes break.
       <td style="text-align: left">3.15pm CEST<br>(15&nbsp;minutes)</td>
       <td style="text-align: left"><i>Introduction to open source interpretability tools</i> using the example of <code>FAT Forensics</code> &ndash; promises and perils of modular research software.</td>
       <td style="text-align: left">Alex&nbsp;Hepburn</td>
-      <td style="text-align: center"><del>slides</del></td>
+      <td style="text-align: center"><b><a href="{{ "2.1-software.pdf" | prepend: site.slides }}">slides</a></b></td>
     </tr>
     <tr>
       <td style="text-align: left">3.30pm CEST<br>(15&nbsp;minutes)</td>
       <td style="text-align: left"><i>Hands-on session preparation</i>. Setting up the package on a personal machine and experimenting with it online: My Binder and Google Colab. Overview of <code>FAT Forensics</code>&apos; API documentation, online tutorials and how-to guides.</td>
       <td style="text-align: left">Alex&nbsp;Hepburn</td>
-      <td style="text-align: center"><b><a href="{{ site.notebooks }}">setup</a></b><br>&<br><del>slides</del></td>
+      <td style="text-align: center"><b><a href="{{ site.notebooks }}">setup</a></b><br>&<br><b><a href="{{ "2.2-hands-on.pdf" | prepend: site.slides }}">slides</a></b></td>
     </tr>
     <tr>
       <td style="text-align: left">3.45pm CEST<br>(30&nbsp;minutes)</td>
       <td style="text-align: left"><i>Break</i>. (An opportunity to resolve any individual issues with the software setup encountered by participants.)</td>
       <td style="text-align: left">Kacper&nbsp;Sokol<br>&amp;&nbsp;Alex&nbsp;Hepburn</td>
-      <td style="text-align: center"><a href="https://fatforensicsevents.slack.com"><b>Slack</b></a></td>
+      <td style="text-align: center"><a href="{{ site.slack }}"><b>Slack</b></a></td>
     </tr>
   </tbody>
 </table>
@@ -324,9 +324,9 @@ from interoperable algorithmic modules -- 1 hour and 45 minutes in total.
 
 | Duration | Activities | Instructor | Resources |
 |:---------|:-----------|:-----------|:---------:|
-| 4.15pm CEST<br>(15&nbsp;minutes) | *Introduction to the hands-on resources* and overview of the Jupyter Notebooks. | Alex Hepburn | ~~slides~~ |
-| 4.30pm CEST<br>(80&nbsp;minutes) | *Active participation* facilitated by the instructors: **bring your own data**. Building bespoke surrogate explainers of black-box predictions for tabular data -- trade-offs associated with choosing particular algorithmic components when building surrogate explainers[^3]. | Kacper Sokol<br>&amp;&nbsp;Alex Hepburn | **[Jupyter<br>Notebooks]({{ site.notebooks }})**<br>&<br>[**Slack**](https://fatforensicsevents.slack.com) |
-| 5.50pm CEST<br>(10&nbsp;minutes) | *Summary and farewell*. | Raul Santos-Rodriguez | ~~slides~~ |
+| 4.15pm CEST<br>(15&nbsp;minutes) | *Introduction to the hands-on resources* and overview of the Jupyter Notebooks. | Alex Hepburn | [**slides**]({{ "3.1-notebooks.pdf" | prepend: site.slides }}) |
+| 4.30pm CEST<br>(80&nbsp;minutes) | *Active participation* facilitated by the instructors: **bring your own data**. Building bespoke surrogate explainers of black-box predictions for tabular data -- trade-offs associated with choosing particular algorithmic components when building surrogate explainers[^3]. | Kacper Sokol<br>&amp;&nbsp;Alex Hepburn | **[Jupyter<br>Notebooks]({{ site.notebooks }})**<br>&<br>[**Slack**]({{ site.slack }}) |
+| 5.50pm CEST<br>(10&nbsp;minutes) | *Summary and farewell*. | Raul Santos-Rodriguez | [**slides**]({{ "3.3-summary.pdf" | prepend: site.slides }}) |
 
 ## Instructors ##
 

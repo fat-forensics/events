@@ -463,8 +463,6 @@ def get_hyperrectangle_indices(discretised_data, hyperrectangle):
 
     assert np.all(0 <= discretised_data), 'Data probably not discretised.'
     if not fatf_v.is_1d_array(discretised_data):
-        assert np.all(discretised_data <= 3), 'Data probably not discretised.'
-        #
         assert (discretised_data.shape[1]
                 == hyperrectangle_.shape[0]), 'Size mismatch.'
 
@@ -523,8 +521,6 @@ def weighted_purity(discretised_data, labels, metric):
     """
     import fatf.utils.array.validation as fatf_v
     assert np.all(0 <= discretised_data), 'Data probably not discretised.'
-    if not fatf_v.is_1d_array(discretised_data):
-        assert np.all(discretised_data <= 3), 'Data probably not discretised.'
     #
     assert (discretised_data.shape[0] == labels.shape[0]), 'Size mismatch.'
     #
