@@ -53,7 +53,7 @@ https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hand
     </tr>
     <tr>
       <td style="text-align: left">Tutorial access:</td>
-      <td style="text-align: left"><b>Zoom</b> &ndash; the webinar URL is <i>only</i> accessible via the Whova app and the ECML-PKDD website (ECML-PKDD 2020 attendees).
+      <td style="text-align: left"><b>Zoom</b> &ndash; the webinar can be accessed via the Whova app or by following this URL: <a href="https://zoom.us/s/97508558957">https://zoom.us/s/97508558957</a>.
                                    <br>The recordings will be made available after the event.</td>
     </tr>
     <tr>
