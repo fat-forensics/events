@@ -12,6 +12,11 @@ notebooks: https://github.com/fat-forensics/events/tree/master/resources/2020_ec
 slides: https://github.com/fat-forensics/events/tree/master/resources/2020_ecml-pkdd/slides/
 slack: https://fatforensicsevents.slack.com/
 
+exclude:
+  - resources
+  - binder
+  - README.md
+
 theme: jekyll-theme-hacker
 
 markdown: kramdown

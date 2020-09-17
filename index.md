@@ -120,6 +120,26 @@ open-sourced under the BSD 3-Clause license and designed for inspecting
 Fairness, Accountability and Transparency (FAT) aspects of data, models and
 predictions.
 
+## Citation ##
+To reference this tutorial please use:
+```bibtex
+@misc{sokol2020what,
+  author       = {Sokol, Kacper and
+                  Hepburn, Alexander and
+                  Santos-Rodriguez, Raul and
+                  Flach, Peter},
+  title        = {{ "{{" }}W}hat and How of Machine Learning Transparency:
+                  {B}uilding Bespoke Explainability Tools with
+                  Interoperable Algorithmic Components},
+  month        = sep,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {2020ecmlpkdd},
+  doi          = {10.5281/zenodo.4035128},
+  url          = {https://doi.org/10.5281/zenodo.4035128}
+}
+```
+
 ## Motivation ##
 Many public-domain implementations of transparency, interpretability and
 explainability (TIE) algorithms are a result of academic research projects.
