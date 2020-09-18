@@ -12,8 +12,8 @@ layout: custom
   <hr>
   Next session: <b style="color: #b5e853; font-size: 16px;">
 <!--Part 1.1: Background and Motivation-->
-Part 1.2: What and How of Modular Interpretability
-<!--Part 2.1: Introduction to Open Source Interpretability Tools-->
+<!--Part 1.2: What and How of Modular Interpretability-->
+Part 2.1: Introduction to Open Source Interpretability Tools
 <!--Part 2.2: Hands-on Session Preparation-->
 <!--Part 2.3: Break-->
 <!--Part 3.1: Introduction to the Hands-on Resources-->
@@ -433,8 +433,8 @@ Learning: The Art and Science of Algorithms that Make Sense of Data"
 <script>
 // Set the date we're counting down to
 // var eventDate = new Date("Sep 18, 2020 14:00:00")  // Part 1.1
-var eventDate = new Date("Sep 18, 2020 14:15:00")  // Part 1.2
-// var eventDate = new Date("Sep 18, 2020 15:15:00")  // Part 2.1
+// var eventDate = new Date("Sep 18, 2020 14:15:00")  // Part 1.2
+var eventDate = new Date("Sep 18, 2020 15:15:00")  // Part 2.1
 // var eventDate = new Date("Sep 18, 2020 15:30:00")  // Part 2.2
 // var eventDate = new Date("Sep 18, 2020 15:45:00")  // Part 2.3
 // var eventDate = new Date("Sep 18, 2020 16:15:00")  // Part 3.1
