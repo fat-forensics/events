@@ -7,27 +7,6 @@ layout: custom
 ### Building Bespoke Explainability Tools with Interoperable Algorithmic Components ###
 {:.no_toc}
 
-<center>
-  <div style="text-align: center; width: 75%">
-  <hr>
-  Next session: <b style="color: #b5e853; font-size: 16px;">
-<!--Part 1.1: Background and Motivation-->
-<!--Part 1.2: What and How of Modular Interpretability-->
-<!--Part 2.1: Introduction to Open Source Interpretability Tools-->
-<!--Part 2.2: Hands-on Session Preparation-->
-<!--Part 2.3: Break-->
-<!--Part 3.1: Introduction to the Hands-on Resources-->
-<!--Part 3.2: Active Participation-->
-Part 3.3: Summary and Farewell
-  </b>
-  <br>
-  In: <b><div id="countdown" style="display: inline-block; color: #b5e853; font-size: 22px;"></div></b>
-  <hr>
-  </div>
-</center>
-
-<br>
-
 <!--
 https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hands-on%20Tutorial&iso=20200918T14&p1=1246&ah=4
 -->
@@ -48,17 +27,8 @@ https://www.timeanddate.com/worldclock/fixedtime.html?msg=FAT%20Forensics%20Hand
       <td style="text-align: left">Friday, September 18<sup>th</sup>, 2020.</td>
     </tr>
     <tr>
-      <td style="text-align: left">What time:</td>
-      <td style="text-align: left"><a href="https://www.thetimezoneconverter.com/?t=2%3A00%20pm&tz=CEST%20(Central%20European%20Summer%20Time)">2pm&ndash;6pm CEST</a>.</td>
-    </tr>
-    <tr>
       <td style="text-align: left">Tutorial access:</td>
-      <td style="text-align: left"><b>Zoom</b> &ndash; the webinar can be accessed via the Whova app or by following this URL: <a href="https://zoom.us/s/97508558957">https://zoom.us/s/97508558957</a>.
-                                   <br>The recordings will be made available after the event.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Discussion&nbsp;access:</td>
-      <td style="text-align: left"><a href="{{ site.slack }}"><b>Slack</b></a> &ndash; the workspace <i>sign-up</i> link is only accessible via the Whova app and the ECML-PKDD website (ECML-PKDD 2020 attendees).</td>
+      <td style="text-align: left"><b>Recordings</b> will be made available soon.</td>
     </tr>
   </tbody>
 </table>
@@ -429,48 +399,3 @@ Learning: The Art and Science of Algorithms that Make Sense of Data"
       Forensics: A Python Toolbox for Algorithmic Fairness, Accountability and
       Transparency. arXiv preprint arXiv:1909.05167.
       <https://arxiv.org/abs/1909.05167>
-
-<script>
-// Set the date we're counting down to
-// var eventDate = new Date("Sep 18, 2020 14:00:00")  // Part 1.1
-// var eventDate = new Date("Sep 18, 2020 14:15:00")  // Part 1.2
-// var eventDate = new Date("Sep 18, 2020 15:15:00")  // Part 2.1
-// var eventDate = new Date("Sep 18, 2020 15:30:00")  // Part 2.2
-// var eventDate = new Date("Sep 18, 2020 15:45:00")  // Part 2.3
-// var eventDate = new Date("Sep 18, 2020 16:15:00")  // Part 3.1
-// var eventDate = new Date("Sep 18, 2020 16:30:00")  // Part 3.2
-var eventDate = new Date("Sep 18, 2020 17:50:00")  // Part 3.3
-
-// eventDate is in the local timezione
-var timezoneOffset = eventDate.getTimezoneOffset() * 60 * 1000;
-// CEST is 120 minutes ahead of UTC
-const CESTcorrection = 120 * 60 * 1000;
-
-var countDownDateUTC = eventDate.getTime() - timezoneOffset - CESTcorrection;
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var nowUTC = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDateUTC - nowUTC;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Output the result in an element with id="demo"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m ";  // + seconds + "s ";
-
-  // If the count down is over, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "NOW";
-  }
-}, 1000);  // 1000
-</script>
