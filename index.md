@@ -17,8 +17,8 @@ layout: custom
 <!--Part 2.2: Hands-on Session Preparation-->
 <!--Part 2.3: Break-->
 <!--Part 3.1: Introduction to the Hands-on Resources-->
-Part 3.2: Active Participation
-<!--Part 3.3: Summary and Farewell-->
+<!--Part 3.2: Active Participation-->
+Part 3.3: Summary and Farewell
   </b>
   <br>
   In: <b><div id="countdown" style="display: inline-block; color: #b5e853; font-size: 22px;"></div></b>
@@ -438,8 +438,8 @@ Learning: The Art and Science of Algorithms that Make Sense of Data"
 // var eventDate = new Date("Sep 18, 2020 15:30:00")  // Part 2.2
 // var eventDate = new Date("Sep 18, 2020 15:45:00")  // Part 2.3
 // var eventDate = new Date("Sep 18, 2020 16:15:00")  // Part 3.1
-var eventDate = new Date("Sep 18, 2020 16:30:00")  // Part 3.2
-// var eventDate = new Date("Sep 18, 2020 17:50:00")  // Part 3.3
+// var eventDate = new Date("Sep 18, 2020 16:30:00")  // Part 3.2
+var eventDate = new Date("Sep 18, 2020 17:50:00")  // Part 3.3
 
 // eventDate is in the local timezione
 var timezoneOffset = eventDate.getTimezoneOffset() * 60 * 1000;
