@@ -1,6 +1,6 @@
 # Slides (ECML-PKDD 2020) #
 More details available on
-<https://events.fat-forensics.org/#schedule-and-resources>.
+<https://events.fat-forensics.org/2020_ecml-pkdd/#schedule-and-resources>.
 
 ## Part 1 ##
 

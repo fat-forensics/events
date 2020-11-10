@@ -1,5 +1,4 @@
 title: FAT Forensic Events
-description: Hands-on Tutorial on Explainable ML with FAT Forensics
 
 show_downloads: false
 google_analytics: UA-142154492-3
@@ -8,8 +7,7 @@ fatf:
   github: https://github.com/fat-forensics/fat-forensics
   docs: https://fat-forensics.org/
 
-notebooks: https://github.com/fat-forensics/events/tree/master/resources/2020_ecml-pkdd/notebooks/
-slides: https://github.com/fat-forensics/events/tree/master/resources/2020_ecml-pkdd/slides/
+youtube: https://youtu.be/
 slack: https://fatforensicsevents.slack.com/
 
 exclude:

@@ -22,7 +22,7 @@ conference in Ghent, Belgium, from the 14th to the 18th of September 2020.
 * [Slides](resources/2020_ecml-pkdd/slides/)
 
 For more details please see the event homepage:
-<https://events.fat-forensics.org>.
+<https://events.fat-forensics.org/2020_ecml-pkdd>.
 
 To reference this tutorial please use:
 ```bibtex

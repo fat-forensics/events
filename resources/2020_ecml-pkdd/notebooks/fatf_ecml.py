@@ -5,7 +5,7 @@ ECML-PKDD 2020 FAT Forensics Hands-on Tutorial
 This library implements a collection of helper functions used by the Jupyter
 Notebooks designated for the FAT Forensics hands-on tutorial organised
 at ECML-PKDD 2020.
-Please see <https://events.fat-forensics.org/> for more details.
+Please see <https://events.fat-forensics.org/2020_ecml-pkdd/> for more details.
 """
 # Author: Kacper Sokol <k.sokol@bristol.ac.uk>
 #         Alex Hepburn <ah13558@bristol.ac.uk>

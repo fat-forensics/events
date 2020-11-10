@@ -8,8 +8,7 @@ used for the [ECML-PKDD 2020](https://ecmlpkdd2020.net/) hands-on tutorial:
 
 These resources provide guidance on building bespoke surrogate explainers
 of individual black-box predictions for tabular data.
-See [events.fat-forensics.org](https://events.fat-forensics.org/) for more
-details.
+See <https://events.fat-forensics.org/2020_ecml-pkdd> for more details.
 
 ## Help with the Hands-on Exercises ##
 During *Part 3.2* of the tutorial you can reach out via the dedicated Slack
