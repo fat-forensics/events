@@ -1,6 +1,6 @@
 ---
 layout: custom
-permalink: /2020_ecml-pkdd/
+permalink: /2020_ecml-pkdd
 
 description: Hands-on Tutorial on Explainable ML with FAT Forensics
 
