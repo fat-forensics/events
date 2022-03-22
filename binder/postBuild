@@ -1,3 +1,0 @@
-#!/bin/bash
-
-pip install -r resources/2020_ecml-pkdd/notebooks/requirements.txt

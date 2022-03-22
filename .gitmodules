@@ -1,0 +1,3 @@
+[submodule "resources/2020_ecml-pkdd"]
+	path = resources/2020_ecml-pkdd
+	url = https://github.com/fat-forensics/Surrogates-Tutorial.git

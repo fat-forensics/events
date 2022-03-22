@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4035128.svg)](https://doi.org/10.5281/zenodo.4035128)
+
 # FAT Forensics Events #
 This repository hosts <https://events.fat-forensics.org>, which holds details
 of past and upcoming events such as workshops and (hands-on) tutorials run with
@@ -10,7 +12,7 @@ Dedicated Slack Workspace:
 
 ## September 2020 -- Hands-on Tutorial at ECML-PKDD 2020 ##
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4035128.svg)](https://doi.org/10.5281/zenodo.4035128)
+[![DOI](https://zenodo.org/badge/DOI/TODO)](https://doi.org/TODO)
 
 > **What and How of Machine Learning Transparency:**  
   *Building Bespoke Explainability Tools with Interoperable Algorithmic Components*
@@ -36,9 +38,5 @@ To reference this tutorial please use:
                   Interoperable Algorithmic Components},
   month        = sep,
   year         = 2020,
-  publisher    = {Zenodo},
-  version      = {2020ecmlpkdd},
-  doi          = {10.5281/zenodo.4035128},
-  url          = {https://doi.org/10.5281/zenodo.4035128}
 }
 ```

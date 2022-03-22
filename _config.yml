@@ -11,9 +11,13 @@ youtube: https://youtu.be/
 slack: https://fatforensicsevents.slack.com/
 
 exclude:
-  - resources
-  - binder
   - README.md
+  - resources/*/binder
+  - resources/*/notebooks
+  - resources/*/paper
+  - resources/*/slides
+  - resources/*/LICENCE
+  - resources/*/README.md
 
 theme: jekyll-theme-hacker
 
