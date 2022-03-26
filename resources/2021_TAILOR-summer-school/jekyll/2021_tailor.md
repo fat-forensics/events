@@ -91,7 +91,7 @@ in particular.
 
 | Duration | Activities | Instructor | Resources |
 |:---------|:-----------|:-----------|:---------:|
-| 4.00pm CEST<br>(75&nbsp;minutes) | Introduction to modular surrogate explainers. | Kacper&nbsp;Sokol | [**slides**]({{ "tailor_surrogates.pdf" | prepend: page.slides }}) |
+| 4.00pm CEST<br>(75&nbsp;minutes) | Introduction to modular surrogate explainers. | Kacper&nbsp;Sokol | [**recording**]({{ page.recordings }}) <br> [**slides**]({{ "tailor_surrogates.pdf" | prepend: page.slides }}) |
 | 5.15pm CEST<br>(45&nbsp;minutes) | Hands-on with parameterising tabular surrogate explainers. | Kacper&nbsp;Sokol | **[Jupyter<br>Notebooks]({{ page.notebooks }})** |
 
 ## Instructors ##
