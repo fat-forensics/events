@@ -43,7 +43,7 @@ For more details please see the event homepage:
 
 ## September 2020 -- Hands-on Tutorial at ECML-PKDD 2020 ##
 
-[![DOI](https://zenodo.org/badge/DOI/TODO)](https://doi.org/TODO)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6395490.svg)](https://doi.org/10.5281/zenodo.6395490)
 
 > **What and How of Machine Learning Transparency:**  
   *Building Bespoke Explainability Tools with Interoperable Algorithmic Components*
@@ -69,5 +69,9 @@ To reference this tutorial please use:
                   Interoperable Algorithmic Components},
   month        = sep,
   year         = 2020,
+  publisher    = {Zenodo},
+  version      = {2020-ecml-pkdd},
+  doi          = {10.5281/zenodo.6395490},
+  url          = {https://doi.org/10.5281/zenodo.6395490}
 }
 ```
