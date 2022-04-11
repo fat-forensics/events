@@ -5,7 +5,12 @@
 
 .btn-book .icon {
   opacity: 0.6;
-  background: url("../images/book.svg") 0 0 no-repeat;
+  background: url("../images/notebook.svg") 0 0 no-repeat;
+}
+
+.btn-demo .icon {
+  opacity: 0.6;
+  background: url("../images/demo.svg") 0 0 no-repeat;
 }
 
 .btn-github .icon {
@@ -15,7 +20,7 @@
 
 .btn-jupyter .icon {
   opacity: 0.6;
-  background: url("../images/jupyter.svg") 0 0 no-repeat;
+  background: url("../images/notebook.svg") 0 0 no-repeat;
 }
 
 .btn-slack .icon {

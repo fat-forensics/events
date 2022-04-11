@@ -7,6 +7,7 @@ description: A 2021 TAILOR Summer School session with a hands-on component
 show_resources: true
 notebooks: https://github.com/fat-forensics/resources/tree/master/tabular_surrogate_builder/
 slides: https://github.com/fat-forensics/events/tree/master/resources/2021_TAILOR-summer-school/slides/
+demo: https://github.com/fat-forensics/resources/tree/master/surrogates_overview/
 recordings: https://youtu.be/yzMnZPAMTWY
 ---
 
@@ -91,7 +92,7 @@ in particular.
 
 | Duration | Activities | Instructor | Resources |
 |:---------|:-----------|:-----------|:---------:|
-| 4.00pm CEST<br>(75&nbsp;minutes) | Introduction to modular surrogate explainers. | Kacper&nbsp;Sokol | [**recording**]({{ page.recordings }}) <br> [**slides**]({{ "tailor_surrogates.pdf" | prepend: page.slides }}) |
+| 4.00pm CEST<br>(75&nbsp;minutes) | Introduction to modular surrogate explainers. | Kacper&nbsp;Sokol | [**recording**]({{ page.recordings }}) <br> [**slides**]({{ "tailor_surrogates.pdf" | prepend: page.slides }}) <br> [**demonstration**]({{ page.demo }}) |
 | 5.15pm CEST<br>(45&nbsp;minutes) | Hands-on with parameterising tabular surrogate explainers. | Kacper&nbsp;Sokol | **[Jupyter<br>Notebooks]({{ page.notebooks }})** |
 
 ## Instructors ##
