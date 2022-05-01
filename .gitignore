@@ -1,7 +1,15 @@
+# MacOS
 *.DS_Store
 
+# Jekyll
 Gemfile.lock
-
 _site
 
+# Python
 *.ipynb_checkpoints
+__pycache__
+
+# Resources
+resources/**/*.jpg
+resources/**/requirements.txt
+resources/**/*.py

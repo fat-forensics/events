@@ -4,6 +4,16 @@ layout: custom
 
 # Events
 
+## RMIT Lectorial 2022
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2022_rmit-lectorial"><img src="assets/images/RMIT-emblem.png" alt="2022 RMIT Lectorial" width="200"/></a></td>
+      <td style="text-align: left"><a href="2022_rmit-lectorial"><b>Transparency and Explainability</b><br><i>The AI/Data Science Professional Lectorial (2022, RMIT University)</i></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## TAILOR Summer School 2021
 <table>
   <tbody>

@@ -49,9 +49,14 @@
             {% if site.slack %}<a href="{{ site.slack }}" class="btn btn-slack"><span class="icon"></span>Slack</a>{% endif %}
           </p>
           {% endif %}
-          {% if page.doi %}
+          {% if page.doi || page.jose %}
           <p>
+            {% if page.doi %}
             <a href="https://doi.org/{{ page.doi }}"><img src="https://zenodo.org/badge/DOI/{{ page.doi }}.svg" alt="DOI"></a>
+            {% endif %}
+            {% if page.jose %}
+            <a href="https://jose.theoj.org/papers/{{ page.jose }}"><img src="https://jose.theoj.org/papers/{{ page.jose }}/status.svg" alt="JOSE DOI"></a>
+            {% endif %}
           </p>
           {% endif %}
         </section>
