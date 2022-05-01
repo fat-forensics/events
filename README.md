@@ -11,6 +11,20 @@ Dedicated Slack Workspace:
 
 # History #
 
+## March 2022 -- RMIT Lectorial ##
+
+> **Transparency and Explainability**  
+  *The AI/Data Science Professional Lectorial (2022, RMIT University)*
+
+An overview of surrogate explainers for the 2022 *AI/Data Science Professional*
+RMIT lectorial.
+
+* [Slides](resources/2022_RMIT-lectorial/slides/)
+* [Demonstration](https://github.com/fat-forensics/resources/tree/master/tabular_surrogate_builder)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2022_rmit-lectorial>.
+
 ## September 2021 -- TAILOR Summer School ##
 
 > **What and How of Machine Learning Transparency:**  
@@ -44,6 +58,7 @@ For more details please see the event homepage:
 ## September 2020 -- Hands-on Tutorial at ECML-PKDD 2020 ##
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6395490.svg)](https://doi.org/10.5281/zenodo.6395490)
+[![JOSE](https://jose.theoj.org/papers/d58625bd4c600da866522c879986b18f/status.svg)](https://jose.theoj.org/papers/d58625bd4c600da866522c879986b18f)
 
 > **What and How of Machine Learning Transparency:**  
   *Building Bespoke Explainability Tools with Interoperable Algorithmic Components*

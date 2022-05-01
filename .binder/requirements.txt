@@ -1,0 +1,1 @@
+-r ../resources/2022_RMIT-lectorial/slides/requirements.txt

@@ -15,8 +15,8 @@ Slides for the 2022 RMIT *AI/Data Science Professional* lectorial.
 This presentation is created with [RISE](https://rise.readthedocs.io/) and
 offered as a Jupyter Notebook.
 To launch the slideshow (based on the [reveal.js](https://revealjs.com/)
-framework) open the notebook within a Jupyter Notebook environment
-(not Jupyter Lab);
+framework) install the dependencies (`pip install -r requirements.txt`) and
+open the notebook within a Jupyter Notebook environment (not Jupyter Lab);
 next:
 
 1. execute all cells, and
