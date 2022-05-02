@@ -34,6 +34,16 @@ layout: custom
   </tbody>
 </table>
 
+## TAILOR Workpackage 3 (2021)
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2021_tailor-wp3"><img src="assets/images/TAILOR-logo-dark-background.png" alt="2021 TAILOR Workpackage 3" width="200"/></a></td>
+      <td style="text-align: left"><a href="2021_tailor-wp3"><b>Do You Trust Your Explainer?</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## ADM+S 2021
 <table>
   <tbody>
@@ -50,6 +60,16 @@ layout: custom
     <tr>
       <td style="text-align: left" width="200px"><a href="2021_euro-explainability"><img src="assets/images/euro21-logo-big-white.png" alt="2021 EURO Talk" width="200"/></a></td>
       <td style="text-align: left"><a href="2021_euro-explainability"><b>Making Machine Learning Explanations Truthful and Intelligible</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
+## Turing AI UK 2021
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2021_turing-ai-uk"><img src="assets/images/turing-light.png" alt="Alan Turing Institute AI UK 2020 Demo" width="200"/></a></td>
+      <td style="text-align: left"><a href="2021_turing-ai-uk"><b>Did You Get That?</b><br><i>Reviewing Intelligibility of State-of-the-art Machine Learning Explanations</i></a></td>
     </tr>
   </tbody>
 </table>

@@ -1,3 +1,4 @@
+[![GitHub Pages](https://img.shields.io/badge/view-page-green.svg)](https://events.fat-forensics.org/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4035128.svg)](https://doi.org/10.5281/zenodo.4035128)
 
 # FAT Forensics Events #
@@ -55,6 +56,17 @@ held between the 2nd and the 7th of September 2021.
 For more details please see the event homepage:
 <https://events.fat-forensics.org/2021_bias>.
 
+## September 2021 -- TAILOR Workpackage 3 ##
+
+> **Do You Trust Your Explainer?**
+
+An interactive presentation for *Workpackage 3* of the TAILOR project.
+
+* [Slides](resources/2021_TAILOR-WP3/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2021_tailor-wp3>.
+
 ## August 2021 -- ADM+S Talk ##
 
 > **Making Machine Learning Explanations Truthful and Intelligible**
@@ -79,6 +91,19 @@ held at the 31st European Conference on Operational Research (2021).
 
 For more details please see the event homepage:
 <https://events.fat-forensics.org/2021_euro-explainability>.
+
+## March 2021 -- The Alan Turing Institute AI UK Demonstration ##
+
+> **Did You Get That?**  
+> *Reviewing Intelligibility of State-of-the-art Machine Learning Explanations*
+
+An interactive demonstration for the *AI in Action* session of
+The Alan Turing Institute's AI UK 2021 conference.
+
+* [Slides](resources/2021_TURING-AI-UK/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2021_turing-ai-uk>.
 
 ## September 2020 -- Hands-on Tutorial at ECML-PKDD 2020 ##
 

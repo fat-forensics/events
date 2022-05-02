@@ -1,0 +1,2 @@
+-r https://raw.githubusercontent.com/fat-forensics/resources/master/surrogates_overview/requirements.txt
+-r https://raw.githubusercontent.com/fat-forensics/resources/master/pi_ice_pd/requirements.txt
