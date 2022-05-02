@@ -12,3 +12,8 @@ __pycache__
 # Resources
 resources/**/*.jpg
 resources/**/*.py
+
+# Node
+node_modules
+package-lock.json
+package.json

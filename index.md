@@ -34,6 +34,26 @@ layout: custom
   </tbody>
 </table>
 
+## ADM+S 2021
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2021_adms"><img src="assets/images/adms-logo.svg" alt="2021 ADM+S Talk" width="200"/></a></td>
+      <td style="text-align: left"><a href="2021_adms"><b>Making Machine Learning Explanations Truthful and Intelligible</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
+## EURO 2021
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2021_euro-explainability"><img src="assets/images/euro21-logo-big-white.png" alt="2021 EURO Talk" width="200"/></a></td>
+      <td style="text-align: left"><a href="2021_euro-explainability"><b>Making Machine Learning Explanations Truthful and Intelligible</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## ECML-PKDD 2020
 <table>
   <tbody>

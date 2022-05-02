@@ -55,6 +55,31 @@ held between the 2nd and the 7th of September 2021.
 For more details please see the event homepage:
 <https://events.fat-forensics.org/2021_bias>.
 
+## August 2021 -- ADM+S Talk ##
+
+> **Making Machine Learning Explanations Truthful and Intelligible**
+
+An invited talk for the **Machines Programme** of the
+*ARC Centre of Excellence for Automated Decision-Making and Society*
+(ADM+S).
+
+* [Slides](resources/2021_ADMS/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2021_adms>.
+
+## July 2021 -- EURO Talk ##
+
+> **Making Machine Learning Explanations Truthful and Intelligible**
+
+An invited talk for the special session on **Fair and Explainable Models**
+held at the 31st European Conference on Operational Research (2021).
+
+* [Slides](resources/2021_EURO-explainability/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2021_euro-explainability>.
+
 ## September 2020 -- Hands-on Tutorial at ECML-PKDD 2020 ##
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6395490.svg)](https://doi.org/10.5281/zenodo.6395490)

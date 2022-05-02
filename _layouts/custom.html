@@ -49,7 +49,7 @@
             {% if site.slack %}<a href="{{ site.slack }}" class="btn btn-slack"><span class="icon"></span>Slack</a>{% endif %}
           </p>
           {% endif %}
-          {% if page.doi || page.jose %}
+          {% if page.doi or page.jose %}
           <p>
             {% if page.doi %}
             <a href="https://doi.org/{{ page.doi }}"><img src="https://zenodo.org/badge/DOI/{{ page.doi }}.svg" alt="DOI"></a>
