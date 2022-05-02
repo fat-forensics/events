@@ -6,7 +6,7 @@ description: An interactive demonstration of machine learning explainers for The
 
 show_resources: true
 notebooks: https://github.com/fat-forensics/resources/tree/master/surrogates_overview/
-slides: https://github.com/fat-forensics/events/tree/master/resources/2021_AI-UK/slides/
+slides: https://github.com/fat-forensics/events/tree/master/resources/2021_TURING-AI-UK/slides/
 recordings: https://youtu.be/pAeb0y1v2lo?t=2069
 ---
 
