@@ -12,6 +12,19 @@ Dedicated Slack Workspace:
 
 # History #
 
+## July 2022 -- AI and Humanity Summer Cluster ##
+
+> **Where Does the Understanding Come From When Explaining Automated Decision-making Systems?**
+
+An interactive presentation for the *AI and Humanity* summer cluster workshop,
+discussing how machine learning explainers can help humans to understand
+automated decision-making.
+
+* [Slides](resources/2022_simons-institute/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2022_simons-institute>.
+
 ## March 2022 -- RMIT Lectorial ##
 
 > **Transparency and Explainability**  

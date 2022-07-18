@@ -17,3 +17,8 @@ resources/**/*.py
 node_modules
 package-lock.json
 package.json
+
+# DrawIO
+*.drawio.bkp
+*.drawio.bkp
+*.drawio.dtmp
