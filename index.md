@@ -4,12 +4,22 @@ layout: custom
 
 # Events
 
+## AI and Humanity Summer Cluster 2022
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2022_simons-institute"><img src="assets/images/simons.png" alt="2022 AI and Humanity Summer Cluster" width="200"/></a></td>
+      <td style="text-align: left"><a href="2022_simons-institute"><b>Where Does the Understanding Come From When Explaining Automated Decision-making Systems?</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## RMIT Lectorial 2022
 <table>
   <tbody>
     <tr>
       <td style="text-align: left" width="200px"><a href="2022_rmit-lectorial"><img src="assets/images/RMIT-emblem.png" alt="2022 RMIT Lectorial" width="200"/></a></td>
-      <td style="text-align: left"><a href="2022_rmit-lectorial"><b>Transparency and Explainability</b><br><i>The AI/Data Science Professional Lectorial (2022, RMIT University)</i></a></td>
+      <td style="text-align: left"><a href="2022_rmit-lectorial"><b>Transparency and Explainability</b></a></td>
     </tr>
   </tbody>
 </table>

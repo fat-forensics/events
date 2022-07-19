@@ -1,3 +1,4 @@
+-r ../resources/2022_simons-institute/slides/requirements.txt
 -r ../resources/2022_RMIT-lectorial/slides/requirements.txt
 -r ../resources/2021_ADMS/slides/requirements.txt
 -r ../resources/2021_EURO-explainability/slides/requirements.txt
