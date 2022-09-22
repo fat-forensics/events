@@ -51,11 +51,14 @@
           {% endif %}
           {% if page.doi or page.jose %}
           <p>
-            {% if page.doi %}
-            <a href="https://doi.org/{{ page.doi }}"><img src="https://zenodo.org/badge/DOI/{{ page.doi }}.svg" alt="DOI"></a>
-            {% endif %}
             {% if page.jose %}
             <a href="https://jose.theoj.org/papers/{{ page.jose }}"><img src="https://jose.theoj.org/papers/{{ page.jose }}/status.svg" alt="JOSE DOI"></a>
+            {% endif %}
+            {% if page.arxiv %}
+            <a href="https://arxiv.org/abs/{{ page.arxiv }}"><img src="https://img.shields.io/badge/arXiv-{{ page.arxiv }}-red.svg" alt="arXiv DOI"></a>
+            {% endif %}
+            {% if page.doi %}
+            <a href="https://doi.org/{{ page.doi }}"><img src="https://zenodo.org/badge/DOI/{{ page.doi }}.svg" alt="ZENODO DOI"></a>
             {% endif %}
           </p>
           {% endif %}

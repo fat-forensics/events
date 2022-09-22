@@ -120,8 +120,9 @@ For more details please see the event homepage:
 
 ## September 2020 -- Hands-on Tutorial at ECML-PKDD 2020 ##
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6395490.svg)](https://doi.org/10.5281/zenodo.6395490)
 [![JOSE](https://jose.theoj.org/papers/d58625bd4c600da866522c879986b18f/status.svg)](https://jose.theoj.org/papers/d58625bd4c600da866522c879986b18f)
+[![arXiv](https://img.shields.io/badge/arXiv-2209.03813-red.svg)](https://arxiv.org/abs/2209.03813)
+[![ZENODO](https://zenodo.org/badge/DOI/10.5281/zenodo.6395490.svg)](https://doi.org/10.5281/zenodo.6395490)
 
 > **What and How of Machine Learning Transparency:**  
   *Building Bespoke Explainability Tools with Interoperable Algorithmic Components*
@@ -137,19 +138,14 @@ For more details please see the event homepage:
 
 To reference this tutorial please use:
 ```bibtex
-@misc{sokol2020what,
-  author       = {Sokol, Kacper and
-                  Hepburn, Alexander and
-                  Santos-Rodriguez, Raul and
-                  Flach, Peter},
-  title        = {{W}hat and How of Machine Learning Transparency:
-                  {B}uilding Bespoke Explainability Tools with
-                  Interoperable Algorithmic Components},
-  month        = sep,
-  year         = 2020,
-  publisher    = {Zenodo},
-  version      = {2020-ecml-pkdd},
-  doi          = {10.5281/zenodo.6395490},
-  url          = {https://doi.org/10.5281/zenodo.6395490}
+@article{sokol2022what,
+  title={What and how of machine learning transparency:
+         {B}uilding bespoke explainability tools with interoperable
+         algorithmic components},
+  author={Sokol, Kacper and Hepburn, Alexander and
+          Santos-Rodriguez, Raul and Flach, Peter},
+  journal={arXiv preprint arXiv:2209.03813},
+  year={2022},
+  doi={10.48550/arXiv.2209.03813}
 }
 ```
