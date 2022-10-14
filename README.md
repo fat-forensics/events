@@ -19,7 +19,7 @@ Dedicated Slack Workspace:
 An interactive presentation given at *ETH Z&uuml;rich*, discussing how to
 interpret and understand insights generated with surrogate explainers.
 
-* [Slides](resources/2022_eth/slides/)
+* [Slides](resources/2022_ETH/slides/)
 
 For more details please see the event homepage:
 <https://events.fat-forensics.org/2022_eth>.
@@ -32,7 +32,7 @@ An interactive presentation given at
 *Universit&agrave; della Svizzera italiana*, discussing how to interpret and
 understand insights generated with surrogate explainers.
 
-* [Slides](resources/2022_usi/slides/)
+* [Slides](resources/2022_USI/slides/)
 
 For more details please see the event homepage:
 <https://events.fat-forensics.org/2022_usi>.

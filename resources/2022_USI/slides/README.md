@@ -1,5 +1,5 @@
-[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fat-forensics/events/master?filepath=resources%2F2022_usi%2Fslides%2Fusi.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fat-forensics/events/blob/master/resources/2022_usi/slides/usi.ipynb)
+[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fat-forensics/events/master?filepath=resources%2F2022_USI%2Fslides%2FUSI.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fat-forensics/events/blob/master/resources/2022_USI/slides/USI.ipynb)
 [![new BSD](https://img.shields.io/github/license/fat-forensics/events.svg)](https://github.com/fat-forensics/events/blob/master/LICENCE)
 
 # Slides (2022 Invited Talk, Universit&agrave; della Svizzera italiana) #
@@ -9,7 +9,7 @@ Interactive slides for a talk given at
 
 | Slides | Description |
 |:-------|:------------|
-| [`usi.ipynb`](usi.ipynb) | Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding |
+| [`USI.ipynb`](USI.ipynb) | Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding |
 
 ---
 

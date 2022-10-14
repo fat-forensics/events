@@ -1,5 +1,5 @@
-[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fat-forensics/events/master?filepath=resources%2F2022_eth%2Fslides%2Feth.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fat-forensics/events/blob/master/resources/2022_eth/slides/eth.ipynb)
+[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fat-forensics/events/master?filepath=resources%2F2022_ETH%2Fslides%2FETH.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fat-forensics/events/blob/master/resources/2022_ETH/slides/ETH.ipynb)
 [![new BSD](https://img.shields.io/github/license/fat-forensics/events.svg)](https://github.com/fat-forensics/events/blob/master/LICENCE)
 
 # Slides (2022 Invited Talk, ETH Z&uuml;rich) #
@@ -8,7 +8,7 @@ Interactive slides for a talk given at *ETH Z&uuml;rich*.
 
 | Slides | Description |
 |:-------|:------------|
-| [`eth.ipynb`](eth.ipynb) | Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding |
+| [`ETH.ipynb`](ETH.ipynb) | Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding |
 
 ---
 
