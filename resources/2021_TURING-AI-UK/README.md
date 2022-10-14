@@ -5,4 +5,4 @@
 > The Alan Turing Institute's AI UK 2021 conference.*
 
 This directory holds the [presentation](slides) used for the demonstration.
-See <https://events.fat-forensics.org/2021_turing-ai-uk/> for more details.
+See <https://events.fat-forensics.org/2021_turing-ai-uk> for more details.

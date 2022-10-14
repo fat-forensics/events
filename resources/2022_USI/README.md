@@ -25,4 +25,4 @@ problem at hand.
 > *Università della Svizzera italiana*, Lugano, Switzerland.
 
 This directory holds [slides](slides) used for the presentation.
-See <https://events.fat-forensics.org/2022_usi/> for more details.
+See <https://events.fat-forensics.org/2022_usi> for more details.

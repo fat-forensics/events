@@ -26,4 +26,4 @@ next:
    Jupyter Notebook toolbar.
 
 More details are available on
-<https://events.fat-forensics.org/2022_usi/>.
+<https://events.fat-forensics.org/2022_usi>.

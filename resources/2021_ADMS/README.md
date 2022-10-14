@@ -5,4 +5,4 @@
 > (ADM+S).*
 
 This directory holds the [presentation](slides) used for the invited talk.
-See <https://events.fat-forensics.org/2021_adms/> for more details.
+See <https://events.fat-forensics.org/2021_adms> for more details.

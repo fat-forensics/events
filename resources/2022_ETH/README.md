@@ -25,4 +25,4 @@ problem at hand.
 > *ETH Z&uuml;rich*, Switzerland.
 
 This directory holds [slides](slides) used for the presentation.
-See <https://events.fat-forensics.org/2022_eth/> for more details.
+See <https://events.fat-forensics.org/2022_eth> for more details.

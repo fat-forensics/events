@@ -3,7 +3,7 @@
 Slides for the hands-on session organised at the
 2021 Bristol Interactive AI Summer School (BIAS).
 More details are available on
-<https://events.fat-forensics.org/2021_bias/#schedule-and-resources>.
+<https://events.fat-forensics.org/2021_bias#schedule-and-resources>.
 
 | Slides | Activities |
 |:-------|:-----------|

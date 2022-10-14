@@ -17,7 +17,7 @@ the technical and social aspects of such tools.
 > The talk recording is available on [YouTube][youtube].
 
 This directory holds the [presentation](slides) used for the presentation.
-See <https://events.fat-forensics.org/2022_simons-institute/> for more details.
+See <https://events.fat-forensics.org/2022_simons-institute> for more details.
 
 [talk]: https://simons.berkeley.edu/talks/tbd-453
 [workshop]: https://simons.berkeley.edu/workshops/schedule/21107

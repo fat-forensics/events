@@ -4,5 +4,5 @@
 > held at the 31st European Conference on Operational Research (2021).*
 
 This directory holds the [presentation](slides) used for the invited talk.
-See <https://events.fat-forensics.org/2021_euro-explainability/> for more
+See <https://events.fat-forensics.org/2021_euro-explainability> for more
 details.

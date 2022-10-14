@@ -28,7 +28,7 @@ next:
    Jupyter Notebook toolbar.
 
 More details are available on
-<https://events.fat-forensics.org/2022_simons-institute/>.
+<https://events.fat-forensics.org/2022_simons-institute>.
 
 [talk]: https://simons.berkeley.edu/talks/tbd-453
 [workshop]: https://simons.berkeley.edu/workshops/schedule/21107
