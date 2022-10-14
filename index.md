@@ -4,6 +4,26 @@ layout: custom
 
 # Events
 
+## ETH Z&uuml;rich Invited Talk 2022
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2022_eth"><img src="assets/images/ethz-light.svg" alt="ETH Z&uuml;rich" width="200"/></a></td>
+      <td style="text-align: left"><a href="2022_eth"><b>Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
+## Universit&agrave; della Svizzera italiana Invited Talk 2022
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2022_usi"><img src="assets/images/usi-light.svg" alt="Universit&agrave; della Svizzera italiana" width="200"/></a></td>
+      <td style="text-align: left"><a href="2022_usi"><b>Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## AI and Humanity Summer Cluster 2022
 <table>
   <tbody>

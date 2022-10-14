@@ -12,6 +12,31 @@ Dedicated Slack Workspace:
 
 # History #
 
+## October 2022 -- ETH Z&uuml;rich ##
+
+> **Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding**
+
+An interactive presentation given at *ETH Z&uuml;rich*, discussing how to
+interpret and understand insights generated with surrogate explainers.
+
+* [Slides](resources/2022_eth/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2022_eth>.
+
+## October 2022 -- Universit&agrave; della Svizzera italiana ##
+
+> **Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding**
+
+An interactive presentation given at
+*Universit&agrave; della Svizzera italiana*, discussing how to interpret and
+understand insights generated with surrogate explainers.
+
+* [Slides](resources/2022_usi/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2022_usi>.
+
 ## July 2022 -- AI and Humanity Summer Cluster ##
 
 > **Where Does the Understanding Come From When Explaining Automated Decision-making Systems?**
