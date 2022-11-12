@@ -12,6 +12,20 @@ Dedicated Slack Workspace:
 
 # History #
 
+## November 2022 -- University of New South Wales ##
+
+> **Never Let the Truth Get in the Way of a Good Story: The Importance of Multilevel Human Understanding in Explainable Artificial Intelligence**
+
+An interactive presentation given at the *University of New South Wales*
+(UNSW), discussing different levels at which explainability techniques and
+their insights need to be understood
+(using the example of surrogate explainers).
+
+* [Slides](resources/2022_UNSW/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2022_unsw>.
+
 ## October 2022 -- ETH Z&uuml;rich ##
 
 > **Mind the Gap! Bridging Explainable Artificial Intelligence and Human Understanding**

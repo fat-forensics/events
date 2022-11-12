@@ -4,6 +4,16 @@ layout: custom
 
 # Events
 
+## University of New South Wales Invited Talk 2022
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2022_unsw"><img src="assets/images/unsw-logo-negative.png" alt="UNSW" width="200"/></a></td>
+      <td style="text-align: left"><a href="2022_unsw"><b>Never Let the Truth Get in the Way of a Good Story: The Importance of Multilevel Human Understanding in Explainable Artificial Intelligence</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## ETH Z&uuml;rich Invited Talk 2022
 <table>
   <tbody>
