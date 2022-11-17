@@ -4,6 +4,16 @@ layout: custom
 
 # Events
 
+## Ethics in Computer Science, University of New South Wales Invited Lecture 2022
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: left" width="200px"><a href="2022_unsw-lecture"><img src="assets/images/unsw-logo-negative.png" alt="UNSW" width="200"/></a></td>
+      <td style="text-align: left"><a href="2022_unsw-lecture"><b>Introduction to Machine Learning Explainability</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## University of New South Wales Invited Talk 2022
 <table>
   <tbody>

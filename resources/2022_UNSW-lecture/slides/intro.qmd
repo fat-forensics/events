@@ -1,0 +1,1311 @@
+---
+title: "Introduction to </br>Machine Learning Explainability"
+subtitle: "Part I"
+author: "Kacper Sokol"
+jupyter: python3
+from: markdown+emoji
+format:
+  revealjs: 
+    toc: true
+    toc-depth: 1
+    toc-title: "Topics"
+    theme: solarized
+    width: 1680
+---
+
+# Brief History of Explainability
+
+---
+
+![](../../../assets/images/figures/fairness_trend.jpeg){fig-alt="Interest in ML fairness" width=55% fig-align="center"}
+
+::: aside
+<https://towardsdatascience.com/a-tutorial-on-fairness-in-machine-learning-3ff8ba1040cb>
+:::
+
+---
+
+## Expert Systems (1970s & 1980s)
+
+![](../../../assets/images/figures/expert_system.svg){fig-alt="Depiction of expert systems" width=55% fig-align="center"}
+
+## Transparent Machine Learning Models
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../../../assets/images/figures/transparent_models-tree.svg){fig-alt="Decision tree" width=75% fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](../../../assets/images/figures/transparent_models-rule.svg){fig-alt="Rule list" width=75% fig-align="center"}
+:::
+
+::::
+
+## Rise of the Dark Side (Deep Neural Networks)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](../../../assets/images/figures/deep_neural_network.svg){fig-alt="Deep neural network" width=75% fig-align="center"}
+:::
+
+::: {.column width="50%"}
+- No need to engineer features (by hand)
+- High predictive power
+- Black-box modelling
+:::
+
+::::
+
+## DARPA's XAI Concept
+
+![](../../../assets/images/figures/xai-figure2-inline-graphic.png){fig-alt="DARPA's XAI concept" width=50% fig-align="center"}
+
+::: aside
+<https://www.darpa.mil/program/explainable-artificial-intelligence>
+:::
+
+# Why We Need Explainability
+
+## Benefits
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Trustworthiness
+
+  > No silly mistakes
+- Fairness
+
+  > Does not discriminate
+:::
+
+::: {.column width="50%"}
+- New knowledge
+
+  > Aids in scientific discovery
+- Legislation
+
+  > Does not break the law
+
+  * EU's General Data Protection Regulation
+  * California Consumer Privacy Act
+:::
+
+::::
+
+## Stakeholders
+
+![](../../../assets/images/figures/stakeholders.jpg){fig-alt="XAI stakeholders" width=55% fig-align="center"}
+
+::: aside
+Belle and Papantonis, 2021. Principles and Practice of Explainable Machine Learning
+:::
+
+# Example of Explainability
+
+---
+
+$$
+f(\mathbf{x}) = 0.2 \;\; + \;\; 0.25 \times x_1 \;\; + \;\; 0.7 \times x_4 \;\; - \;\; 0.2 \times x_5 \;\; - \;\; 0.9 \times x_7
+$$
+</br>
+$$
+\mathbf{x} = (0.4, \ldots, 1, \frac{1}{2}, \ldots \frac{1}{3})
+$$
+
+. . .
+
+</br>
+
+$$
+f(\mathbf{x}) = 0.2 \;\; \underbrace{+0.1}_{x_1} \;\; \underbrace{+0.7}_{x_4} \;\; \underbrace{-0.1}_{x_5} \;\; \underbrace{-0.3}_{x_7} \;\; = \;\; 0.6
+$$
+
+---
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn')
+
+colour_positive = '#FF0D57'  # 255, 13, 87   # g
+colour_negative = '#1E88E5'  # 30, 136, 229  # r
+
+middle = .2
+names = ['$x_{}$'.format(i) for i in range(9)]
+values = [0, 0.1, 0, 0, 0.7, -0.1, 0, -0.3, 0]
+colours = [colour_negative if i < 0 else colour_positive
+           for i in values]
+prediction = sum(values) + middle
+
+################
+
+bar_explanation = plt.figure(figsize=(8, 6), dpi=100)
+bar_explanation.patch.set_alpha(0)
+
+# Filter
+names_ = [names[i] for i, v in enumerate(values) if v]
+values_ = [v for v in values if v]
+colours_ = [colours[i] for i, v in enumerate(values) if v]
+
+# Order
+_ordering = np.argsort(np.abs(values_))
+
+names_ = np.flip(np.asarray(names_)[_ordering]).tolist()
+values_ = np.flip(np.asarray(values_)[_ordering]).tolist()
+colours_ = np.flip(np.asarray(colours_)[_ordering]).tolist()
+
+# Plot
+plt.barh(names_[::-1],
+         values_[::-1],
+         color=colours_[::-1],
+         height=.9)
+
+for i, v in enumerate(values_[::-1]):
+    v_s = f'+{v:.1f}' if v > 0 else f'{v:.1f}'.replace('−', '-')
+    s = v + 0.02 if v > 0 else .02
+    c = colour_negative if v < 0 else colour_positive
+    plt.text(s, i - .06, v_s, color=c, fontweight='bold', fontsize=18)
+
+plt.tight_layout()
+left_, right_ = plt.xlim()
+plt.xlim((left_, 1.10*right_))
+
+plt.tick_params(axis='x', labelsize=18)
+plt.tick_params(axis='y', labelsize=18)
+
+ax = bar_explanation.axes[0]
+x_ticks = [item.get_text() for item in ax.get_xticklabels()]
+x_ticks_ = []
+for i in x_ticks:
+  if not i:
+    x_ticks_.append(i)
+    continue
+
+  i_float = float(i.replace('−', '-'))
+  if i_float < 0:
+    x_ticks_.append(i)
+  elif i_float == 0:
+    x_ticks_.append(middle)
+  else:
+    x_ticks_.append(f'+{i}')
+ax.set_xticklabels(x_ticks_)
+
+plt.text(.5, 0.1, f'$f(\mathbf{{x}})={prediction}$', color='k', fontsize=24)
+plt.show()
+
+# bar_explanation
+```
+
+---
+
+![](../../../assets/images/figures/force-plot-x.svg){fig-alt="Force plot explanation" width=100% fig-align="center"}
+
+<!-- Landmark Literature -->
+# Important Developments
+
+## Where Is the Human? (circa 2017)
+
+![](../../../assets/images/figures/explanation.png){fig-alt="Insights from social sciences" width=27% fig-align="center"}
+![](../../../assets/images/figures/explanation-x.png){fig-alt="Insights from social sciences" width=65% fig-align="center"}
+
+::: aside
+Miller, 2019. Explanation in artificial intelligence: Insights from the social sciences
+:::
+
+---
+
+### Humans and Explanations
+
+- Human-centred perspective on explainability
+- Infusion of explainability insights from social sciences
+  * Interactive dialogue (bi-directional explanatory process)
+  * Contrastive statements (e.g., counterfactual explanations)
+
+## Exploding Complexity (2019)
+
+![](../../../assets/images/figures/stop.png){fig-alt="Ante-hoc explainability" width=32% fig-align="center"}
+![](../../../assets/images/figures/stop-x.png){fig-alt="Ante-hoc explainability" width=55% fig-align="center"}
+
+::: aside
+Rudin, 2019. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead
+:::
+
+---
+
+### Ante-hoc vs. Post-hoc
+
+![](../../../assets/images/figures/explainability-vs-performance.svg){fig-alt="Ante-hoc vs. post-hoc explainability" width=25% fig-align="center"}
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Black Box + Post-hoc Explainer
+
+1. Chose a well-performing black-box model
+2. Use explainer that is
+    * *post-hoc* (can be retrofitted into pre-existing predictors)
+    * and possibly *model-agnostic* (works with any black box)
+:::
+
+::: {.column width="50%"}
+<!-- https://www.kindpng.com/imgv/hTbmhJ_silver-bullet-image-png-transparent-png/ -->
+![](../../../assets/images/figures/bullet.png){fig-alt="Silver bullet" width=90% fig-align="center"}
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Caveat: The No Free Lunch Theorem
+![](../../../assets/images/figures/lunch.jpeg){fig-alt="Silver bullet" width=80% fig-align="center"}
+:::
+
+::: {.column width="50%"}
+### Post-hoc explainers have poor fidelity
+
+- Explainability needs a **process** similar to *KDD*, *CRISP-DM* or *BigData*  
+  ![](../../../assets/images/figures/proc.png){fig-alt="Data process" width=40% fig-align="center"}
+- Focus on engineering **informative features** and **inherently transparent models**
+
+. . .
+
+> **It requires effort**
+:::
+
+::::
+
+## XAI process
+![](../../../assets/images/figures/xai-process.png){fig-alt="XAI process" width=7% style="vertical-align:top; float:right;"}
+A **generic** eXplainable Artificial Intelligence process is *beyond our reach* at the moment
+
+- **XAI Taxonomy** spanning social and technical desiderata:\
+  &bull; Functional &bull; Operational &bull; Usability &bull; Safety &bull; Validation &bull;\
+  <span style="font-size: 18px;">(*Sokol and Flach, 2020. Explainability Fact Sheets: A Framework for Systematic Assessment of Explainable Approaches*)</span>
+
+- **Framework** for black-box explainers\
+  <span style="font-size: 18px;">(*Henin and Le Métayer, 2019. Towards a generic framework for black-box explanations of algorithmic decision systems*)</span></br>
+  ![](../../../assets/images/figures/framework.png){fig-alt="XAI process" width=65% fig-align="center"}
+
+<!--
+## Beyond a Singular Explanation
+
+- LIMEtree: Multi-class explainability
+-->
+
+# Taxonomy of Explainable AI
+
+**(Explainability Fact Sheets)**
+
+---
+
+*Social* and *technical* explainability desiderata spanning five dimensions
+
+1. **functional** -- algorithmic requirements
+3. **usability** -- user-centred properties
+2. **operational** -- deployment setting
+4. **safety** -- robustness and security <!-- of the method -->
+5. **validation** -- evaluation, verification and validation <!-- of the method -->
+
+::: aside
+Sokol and Flach, 2020. Explainability Fact Sheets: A Framework for Systematic Assessment of Explainable Approaches
+:::
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+:busts_in_silhouette: &nbsp; *Audience*
+
+- :woman_scientist: &nbsp; Researchers (*creators*)
+- :man_technologist: &nbsp; Practitioners (*users*):  
+  engineers & data scientists
+- :female_detective: &nbsp; Compliance Personnel (*evaluators*):  
+  policymakers & auditors
+:::
+
+::: {.column width="50%"}
+:gear:️ &nbsp; *Operationalisation*
+
+- Work Sheets:  
+  design & development
+- Fact Sheets:  
+  assessment & comparison <!-- assessment -->
+- Checklist:  
+  inspection, compliance, impact & certification
+:::
+
+::::
+
+---
+
+:toolbox: &nbsp; *Applicability*
+
+- Explainability Approaches (*theory*)
+- Algorithms (*design*)
+- Implementations (*code*)
+
+## Running Example: Counterfactual Explanations
+
+:::: {.columns}
+
+::: {.column width="50%"}
+> Had you been **10 years younger**,
+> your loan application would be **accepted**.
+:::
+
+::: {.column width="45%"}
+![](../../../assets/images/figures/img_cf.svg){fig-alt="Example of an image counterfactual explanation" width=100% fig-align="center"}
+:::
+
+::::
+
+<!--
+## (F) Functional Requirements
+-->
+
+## (F) Functional Requirements
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- **F1** Problem Supervision Level
+- **F2** Problem Type
+- **F3** Explanation Target
+- **F4** Explanation Breadth/Scope
+- **F5** Computational Complexity
+:::
+
+::: {.column width="50%"}
+- **F6** Applicable Model Class
+- **F7** Relation to the Predictive System
+- **F8** Compatible Feature Types
+- **F9** Caveats and Assumptions
+:::
+
+::::
+
+## {.smaller}
+
+<table>
+<tr>
+<td style="vertical-align: text-top;">
+
+**F1** Problem Supervision Level
+
+</td>
+<td>
+
+- unsupervised
+- semi-supervised
+- supervised
+- reinforcement
+
+</td>
+</tr>
+<tr>
+<td>
+
+**F2** Problem Type
+
+</td>
+<td>
+
+- classification
+  - probabilistic / non-probabilistic
+  - binary / multi-class
+  - multi-label
+- regression
+- clustering
+
+</td>
+</tr>
+</table>
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**F6** Applicable Model Class
+
+</td>
+<td>
+
+- model-agnostic
+- model class-specific
+- model-specific
+
+</td>
+</tr>
+<tr>
+<td>
+
+**F7** Relation to the Predictive System
+
+</td>
+<td>
+
+- **ante-hoc** (based on endogenous information)
+- post-hoc (based on exogenous information)
+
+</td>
+</tr>
+</table>
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**F5** Computational Complexity
+
+</td>
+<td>
+
+- off-line explanations
+- real-time explanations
+
+</td>
+</tr>
+<tr>
+<td>
+
+**F8** Compatible Feature Types
+
+</td>
+<td>
+
+- numerical
+- categorical (one-hot encoding)
+
+</td>
+</tr>
+<tr>
+<td>
+
+**F9** Caveats and Assumptions
+
+</td>
+<td>
+
+- any underlying assumptions, e.g., black box linearity
+
+</td>
+</tr>
+</table>
+
+## {.smaller}
+
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**F3** Explanation Target
+
+</td>
+<td>
+
+- data (both raw data and features)
+- models
+- **predictions**
+
+</td>
+</tr>
+<tr>
+<td>
+
+**F4** Explanation Breadth/Scope
+
+</td>
+<td>
+
+- **local** – data point / prediction
+- cohort – subgroup / subspace
+- global
+
+</td>
+</tr>
+</table>
+
+<!--
+## (U) Usability Requirements
+-->
+
+## (U) Usability Requirements
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- **U1** Soundness
+- **U2** Completeness
+- **U3** Contextfullness
+- **U4** Interactiveness
+- **U5** Actionability
+- **U6** Chronology
+:::
+
+::: {.column width="50%"}
+- **U7** Coherence
+- **U8** Novelty
+- **U9** Complexity
+- **U10** Personalisation
+- **U11** Parsimony
+:::
+
+::::
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**U1** Soundness
+
+</td>
+<td>
+
+How truthful it is with respect to the black box?
+
+</td>
+<td>
+
+(&#10004;)
+
+</td>
+</tr>
+<tr>
+<td>
+
+**U2** Completeness
+
+</td>
+<td>
+
+How well does it generalise?
+
+</td>
+<td>
+
+(&#10007;)
+
+</td>
+</tr>
+<tr>
+<td>
+
+**U3** Contextfullness
+
+</td>
+<td>
+
+"It only holds for people older than 25."
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+
+**U11** Parsimony
+
+</td>
+<td>
+
+How short is it?
+
+</td>
+<td>
+
+(&#10004;)
+
+</td>
+</tr>
+</table>
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**U6** Chronology
+
+</td>
+<td>
+
+More recent events first.
+
+</td>
+</tr>
+<tr>
+<td>
+
+**U7** Coherence
+
+</td>
+<td>
+
+Comply with the natural laws (mental model).
+
+</td>
+</tr>
+<tr>
+<td>
+
+**U8** Novelty
+
+</td>
+<td>
+
+Avoid stating obvious / being a truism.
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+
+**U9** Complexity
+
+</td>
+<td>
+
+Appropriate for the audience.
+
+</td>
+</tr>
+</table>
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**U5** Actionability
+
+</td>
+<td>
+
+Actionable foil.
+
+</td>
+<td>
+
+(&#10004;)
+
+</td>
+</tr>
+<tr>
+<td>
+
+**U4** Interactiveness
+
+</td>
+<td>
+
+User-defined foil.
+
+</td>
+<td>
+
+(&#10004;)
+
+</td>
+</tr>
+<tr>
+<td>
+
+**U10** Personalisation
+
+</td>
+<td>
+
+User-defined foil.
+
+</td>
+<td>
+
+(&#10004;)
+
+</td>
+</tr>
+</table>
+
+<!--
+## (O) Operational Requirements
+-->
+
+## (O) Operational Requirements
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- **O1** Explanation Family
+- **O2** Explanatory Medium
+- **O3** System Interaction
+- **O4** Explanation Domain
+- **O5** Data and Model Transparency
+:::
+
+::: {.column width="50%"}
+- **O6** Explanation Audience
+- **O7** Function of the Explanation
+- **O8** Causality vs. Actionability
+- **O9** Trust vs. Performance
+- **O10** Provenance
+:::
+
+::::
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**O1** Explanation Family
+
+</td>
+<td>
+
+- associations between antecedent and consequent
+- **contrasts and differences**
+- causal mechanisms
+
+</td>
+</tr>
+<tr>
+<td>
+
+**O2** Explanatory Medium
+
+</td>
+<td>
+
+- (statistical / numerical) summarisation
+- **visualisation**
+- **textualisation**
+- formal argumentation
+
+</td>
+</tr>
+<tr>
+<td>
+
+**O3** System Interaction
+
+</td>
+<td>
+
+- **static** – one-directional
+- **interactive** – bi-directional
+
+</td>
+</tr>
+</table>
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**O4** Explanation Domain
+
+</td>
+<td>
+
+- **original domain** (exemplars, model parameters)
+- **transformed domain** (interpretable representation)
+
+</td>
+</tr>
+<tr>
+<td>
+
+**O5** Data and Model Transparency
+
+</td>
+<td>
+
+- **transparent/opaque data**
+- transparent/opaque model
+
+</td>
+</tr>
+<tr>
+<td>
+
+**O6** Explanation Audience
+
+</td>
+<td>
+
+- **domain experts**
+- **lay audience**
+
+</td>
+</tr>
+</table>
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**O7** Function of the Explanation
+
+</td>
+<td>
+
+- **interpretability**
+- **fairness** (disparate impact)
+- **accountability** (model robustness / adversarial examples)
+
+</td>
+</tr>
+<tr>
+<td>
+
+**O8** Causality vs. Actionability
+
+</td>
+<td>
+
+- **look like causal insights but aren't**
+
+</td>
+</tr>
+<tr>
+<td>
+
+**O9** Trust and Performance
+
+</td>
+<td>
+
+- **truthful** to the black-box (perfect fidelity)
+- predictive performance is **not affected**
+
+</td>
+</tr>
+</table>
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**O10** Provenance
+
+</td>
+<td>
+
+- **predictive model**
+- data set
+- predictive model and data set (explainability trace)
+
+</td>
+</tr>
+</table>
+
+<!--
+## (S) Safety Requirements
+-->
+
+## (S) Safety Requirements
+
+- **S1** Information Leakage
+- **S2** Explanation Misuse
+- **S3** Explanation Invariance
+- **S4** Explanation Quality
+
+## {.smaller}
+
+<table style="text-align: left;">
+<tr>
+<td>
+
+**S1** Information Leakage
+
+</td>
+<td>
+
+Contrastive explanation **leak** precise values.
+
+</td>
+</tr>
+<tr>
+<td>
+
+**S2** Explanation Misuse
+
+</td>
+<td>
+
+Can be used to **reverse-engineer** the black box.
+
+</td>
+</tr>
+<tr>
+<td>
+
+**S3** Explanation Invariance
+
+</td>
+<td>
+
+Does it always output the same explanation (stochasticity / stability)?
+
+</td>
+</tr>
+<tr>
+<td>
+
+**S4** Explanation Quality
+
+</td>
+<td>
+
+Is it from the data distribution? </br>
+How far from a decision boundary (confidence)?
+
+</td>
+</tr>
+</table>
+
+<!--
+## (V) Validation Requirements
+-->
+
+## (V) Validation Requirements
+
+- **V1** User Studies
+- **V2** Synthetic Experiments
+
+## {.smaller}
+
+<table>
+<tr>
+<td>
+
+**V1** User Studies
+
+</td>
+<td rowspan="2">
+
+- Technical correctness
+- Human biases
+- Unfounded generalisation
+- Usefulness
+
+</td>
+</tr>
+<tr>
+<td>
+
+**V2** Synthetic Experiments
+
+</td>
+</tr>
+</table>
+
+## Examples
+
+---
+
+### :woman_scientist: &nbsp; Researcher's &nbsp; :tophat:
+
+- :mag: only works with predictive models that **output numbers** (**F2** *Problem Type*)
+  - Is :mag: intended for regressors?
+  - Can :mag: be used with probabilistic classifiers?
+
+---
+
+- :mag: only works with **numerical features** (**F8** *Compatible Feature Types*)
+  - If data have categorical features, is applying one-hot encoding suitable?
+
+<!--
+### :woman_scientist: &nbsp; Researcher's &nbsp; :tophat:
+-->
+
+---
+
+- :mag: is **model agnostic** (**F6** *Applicable Model Class*)
+  - Can :mag: be used with any predictive model?
+
+<!--
+- :mag: is **post-hoc** (**F7** *Relation to the Predictive System*)
+  - Can :mag: be retro-fitted?
+-->
+
+---
+
+- :mag: has nice **theoretical properties** (**F9** *Caveats and Assumptions*)
+
+  > The explanation is always **[insert your favourite claim here]**.
+
+  - This claim may not hold for **every black-box** model (model agnostic explainer)
+  - The implementation **does not adhere** to the claim
+
+---
+
+### :man_technologist: &nbsp; Engineer's &nbsp; :tophat:
+
+- :mag: explains **song recommendations** (**O7** *Function of the Explanation*)
+- :mag: explains how users' **listening habits** and **interactions** with the service influence the recommendations (**O10** *Provenance* & **U5** *Actionability*)
+
+---
+
+- How does :mag: scale? (**F5** *Computational Complexity*)
+  - Required to serve explanations in **real time**
+  - Will the computational complexity of the algorithm introduce any **lags**?
+
+<!--
+### :man_technologist: &nbsp; Engineer's &nbsp; :tophat:
+-->
+
+---
+
+- **Music listeners** are the recipients of the explanations (**O6** *Explanation Audience*)
+  - They are not expected to have any ML experience or background (**U9** *Complexity*)
+- They should be familiar with **general music concepts** (genre, pace, etc.) to appreciate the explanations (**O4** *Explanation Domain*)
+
+---
+
+- The explanations will be delivered as **snippets of text** (**O2** *Explanatory Medium*)
+- They will include a single **piece of information** (**U11** *Parsimony*)
+- They are **one-directional** communication (**O3** *System Interaction* & **U4** *Interactiveness*)
+
+---
+
+### :female_detective: &nbsp; Auditor's &nbsp; :tophat:
+
+- Are the explanations **sound** (**U1**) and **complete** (**U2**)?
+  - Do they agree with the predictive model?
+  - Are they coherent with the overall behaviour of the model?
+- Are the explanations placed in a **context**? (**U3** *Contextfullness*)
+  - "This explanation only applies to songs of this particular band."
+
+---
+
+- Will I get the **same explanation** tomorrow? (**S3** *Explanation Invariance*)
+  - Confidence of the predictive model
+  - Random effects within the :mag: algorithm
+
+<!--
+### :female_detective: &nbsp; Auditor's &nbsp; :tophat:
+-->
+
+---
+
+- Does the explainer **leak any sensitive information**? (**S1** *Information Leakage*)
+  - &rarr;*explanation*&larr;  
+    "Had you been older than 30, your loan application would have been approved."
+  - &rarr;*context*&larr;  
+    "This age threshold applies to people whose annual income is upwards of £25,000."
+- Why don't I **"round up"** my income the next time? (**S2** *Explanation Misuse*)
+
+---
+
+- Was :mag: **validated** for the problem class that it is being deployed on? (**V2** *Synthetic Validation*)
+- Does :mag: **improve users' understanding**? (**V1** *User Studies*)
+
+## LIME Explainability Fact Sheet
+
+![](../../../assets/images/figures/lime_fact-sheet.png){fig-alt="LIME explainability fact sheet" width=75% fig-align="center"}
+
+## Challenges
+
+- The desiderata list is neither **exhaustive** nor **prescriptive**
+- Some properties are **incompatible** or **competing** – choose wisely and justify your choices
+  - Should I focus more on property F42 or F44?
+  - For O13, should I go for X or Y?
+- Other properties cannot be answered **uniquely**
+  - E.g., coherence with the user’s mental model
+- The taxonomy **does not define explainability**
+
+# What Is Explainability?
+
+**(You know it when you see it!)**
+
+## Lack of a universally accepted definition
+<!-- **Explainability lacks a universally accepted definition** -->
+
+* **Simulatability**  
+  (*Lipton, 2018. The mythos of model interpretability*)
+* **The Chinese Room Theorem**  
+  (*Searle, 1980. Minds, brains, and programs*)
+* **Mental Models**  
+  (*Kulesza et al., 2013. Too much, too little, or just right? Ways explanations impact end users' mental models*)
+  - **Functional** – operationalisation without understanding
+  - **Structural** – appreciation of the underlying mechanism
+
+## Defining explainability
+
+$$
+\texttt{Explainability} \; =
+$$
+$$
+\underbrace{ \texttt{Reasoning} \left( \texttt{Transparency} \; | \; \texttt{Background Knowledge} \right)}_{\textit{understanding}}
+$$
+
+* *Transparency* – **insight** (of arbitrary complexity) into operation of a system
+* *Background Knowledge* – implicit or explicit **exogenous information**
+* *Reasoning* – **algorithmic** or **mental processing** of information
+
+::: aside
+Sokol and Flach, 2021. Explainability Is in the Mind of the Beholder: Establishing the Foundations of Explainable Artificial Intelligence
+:::
+
+---
+
+> Explainability &rarr; **explainee** walking away with **understanding**
+
+## Understanding, explainability & transparency
+<!-- **Explainability is not a binary property; it is a continuous spectrum.** -->
+
+</br>
+
+A **continuous spectrum** rather than a binary property
+
+</br>
+
+![](../../../assets/images/figures/blackboxiness.svg){width=75% fig-alt="Shades of black-boxiness"}
+
+# Evaluating Explainability
+
+## Automated Decision-making
+<!-- **Automated Decision-making** -->
+
+</br>
+
+![](../../../assets/images/figures/val-automated-decisions.svg){width=75% fig-alt="Automated decision-making workflow"}
+
+## Naïve view
+
+</br>
+
+![](../../../assets/images/figures/val-current.svg){width=75% fig-alt="Current validation"}
+
+## Evaluation Tiers
+
+| | Humans | Task |
+|-|--------|------|
+| Application-grounded Evaluation | Real Humans | Real Tasks |
+| Human-grounded Evaluation | Real Humans | Simple Tasks |
+| Functionally-grounded Evaluation | No Real Humans | Proxy Tasks |
+
+::: aside
+Kim and Doshi-Velez, 2017. Towards A Rigorous Science of Interpretable Machine Learning
+:::
+
+## Explanatory insight & presentation medium
+
+</br>
+
+![](../../../assets/images/figures/val-proposed1.svg){width=50% fig-align="center" fig-alt="Proposed validation 1"}
+
+## Phenomenon & explanation
+
+</br>
+
+![](../../../assets/images/figures/val-proposed2.svg){width=25% fig-align="center" fig-alt="Proposed validation 2"}
+
+# Take-home Messages
+
+---
+
+<!-- properties must be considered on a case-by-case basis -->
+
+> Each (real-life) explainability scenario is **unique** and requires a **bespoke solution**
+
+---
+
+> Explainers are **socio-technical** constructs, hence we should strive for **seamless integration with humans** as well as **technical correctness and soundness**
+
+---
+
+![](../../../assets/images/figures/elephant.svg){width=55% fig-align="center" fig-alt="The Blind Men and the Elephant"}
+
+::: aside
+(The Blind Men and the Elephant)
+:::
+
+# Useful Resources
+
+## :book: &nbsp; Books
+
+- [Survey of machine learning interpretability][iml]
+  in form of an online book
+- Overview of [explanatory model analysis][ema] published as
+  an online book
+- [Hands-on machine learning explainability][xml] online book
+  (*URL to follow*)
+
+<!-- books -->
+[iml]: https://christophm.github.io/interpretable-ml-book/
+[ema]: https://ema.drwhy.ai/
+[xml]: #usefulresources
+
+## :memo: &nbsp; Papers
+
+- General introduction to [interpretability][beholder]
+- Introduction to [human-centred explainability][miller]
+- Critique of [post-hoc explainability][rudin]
+- Survey of [interpretability techniques][guidotti]
+- [Taxonomy of explainability approaches][taxonomy]
+
+<!-- papers -->
+[beholder]: https://arxiv.org/abs/2112.14466
+[taxonomy]: https://arxiv.org/abs/1912.05100
+[miller]: https://arxiv.org/abs/1706.07269
+[rudin]: https://www.nature.com/articles/s42256-019-0048-x
+[guidotti]: https://arxiv.org/abs/1802.01933
+
+## :minidisc: &nbsp; Software
+
+- LIME ([Python][lime-py], [R][lime-r])
+- SHAP ([Python][shap-py], [R][shap-r])
+- Microsoft's [Interpret][interpret]
+- Oracle's [Skater][skater]
+- IBM's [Explainability 360][ex360]
+- [FAT Forensics][fatf]
+
+<!-- software -->
+[lime-py]: https://lime-ml.readthedocs.io/en/latest/
+[lime-r]: https://cran.r-project.org/web/packages/lime/vignettes/Understanding_lime.html
+[shap-py]: https://shap.readthedocs.io/en/latest/
+[shap-r]: https://cran.r-project.org/web/packages/shapr/vignettes/understanding_shapr.html
+[interpret]: https://interpret.ml/docs/getting-started
+[skater]: https://oracle.github.io/Skater/overview.html
+[ex360]: https://aix360.readthedocs.io/en/latest/
+[fatf]: https://fat-forensics.org/
+
+---
+
+&nbsp;

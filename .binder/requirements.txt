@@ -1,3 +1,4 @@
+-r ../resources/2022_UNSW-lecture/slides/requirements.txt
 -r ../resources/2022_UNSW/slides/requirements.txt
 -r ../resources/2022_ETH/slides/requirements.txt
 -r ../resources/2022_USI/slides/requirements.txt

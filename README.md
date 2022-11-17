@@ -12,6 +12,19 @@ Dedicated Slack Workspace:
 
 # History #
 
+## November 2022 -- University of New South Wales Lecture ##
+
+> **Introduction to Machine Learning Explainability**
+
+An invited lecture given for the *Ethics in Computer Science*
+(COMP4920/SENG4920 22T3) course at the
+*University of New South Wales* (UNSW), Sydney.
+
+* [Slides](resources/2022_UNSW-lecture/slides/)
+
+For more details please see the event homepage:
+<https://events.fat-forensics.org/2022_unsw-lecture>.
+
 ## November 2022 -- University of New South Wales ##
 
 > **Never Let the Truth Get in the Way of a Good Story: The Importance of Multilevel Human Understanding in Explainable Artificial Intelligence**

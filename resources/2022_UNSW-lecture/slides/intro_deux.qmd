@@ -1,0 +1,155 @@
+---
+title: "Introduction to </br>Machine Learning Explainability"
+subtitle: "Part II"
+author: "Kacper Sokol"
+jupyter: python3
+from: markdown+emoji
+format:
+  revealjs: 
+    toc: true
+    toc-depth: 1
+    toc-title: "Topics"
+    theme: solarized
+    width: 1680
+---
+
+# Classification of Explanations
+
+---
+
+**O1** Explanation Family
+
+- associations between antecedent and consequent
+- contrasts and differences
+- causal mechanisms
+
+<!-- # Types of Explanations -->
+
+## Associations Between Antecedent and Consequent
+
+:::: {.columns}
+
+::: {.column width="65%"}
+- feature importance
+- feature attribution / influence
+- rules
+:::
+
+::: {.column width="35%" .fragment}
+- exemplars (prototypes & criticisms)
+:::
+
+::::
+
+## Contrasts and Differences
+
+- (non-causal) counterfactuals  
+  i.e., contrastive statements
+- prototypes & criticisms
+
+## Causal Mechanisms
+
+- causal counterfactuals
+- causal chains
+- full causal model
+
+# Explanation Modalities
+
+---
+
+**O2** Explanatory Medium
+
+- (statistical / numerical) summarisation
+- visualisation
+- textualisation
+- formal argumentation
+
+---
+
+**O4** Explanation Domain
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Original domain**  
+![](../../../assets/images/figures/img_exp_og.png){width=55% fig-align="center" fig-alt="Original domain"}
+:::
+
+::: {.column width="50%"}
+**Transformed domain**  
+![](../../../assets/images/figures/img_exp_bar.png){width=50% fig-align="center" fig-alt="Transformed domain"}
+:::
+
+::::
+
+---
+
+(**O3** *System Interaction* & **U4** *Interactiveness*]
+
+</br>
+
+Provided within a static or interactive protocol
+
+- ~~interactive interface~~
+- interactive explanation
+
+# Examples of Explanations
+
+## Permutation Feature Importance
+
+![](../../../assets/images/figures/pfi.png){width=95% fig-align="center" fig-alt="PFI"}
+
+::: aside
+<https://www.kaggle.com/code/dansbecker/permutation-importance>
+:::
+
+## Individual Conditional Expectation & </br> Partial Dependence
+
+![](../../../assets/images/figures/ice-pd.png){width=75% fig-align="center" fig-alt="PFI"}
+
+## FACE Counterfactuals
+
+![](../../../assets/images/figures/face.png){width=40% fig-align="center" fig-alt="FACE"}
+
+::: aside
+Poyiadzi, Sokol, Santos-Rodriguez, De Bie and Flach, 2020. FACE: Feasible and actionable counterfactual explanations
+:::
+
+## RuleFit
+
+![](../../../assets/images/figures/rulefit.png){width=50% fig-align="center" fig-alt="RuleFit"}
+
+::: aside
+<https://christophm.github.io/interpretable-ml-book/rulefit.html>
+:::
+
+# Data Explainability
+
+---
+
+* Data as an (implicit) model
+* Data summarisation and description
+* ~~Exemplars, prototypes and criticisms~~
+* ~~Dimensionality reduction (e.g., t-SNE)~~
+
+# Transparent Modelling
+
+---
+
+* Rule lists and sets
+* Linear models <!-- (and generalised additive models) -->
+* Decision trees
+* $k$-nearest neighbours and $k$-means
+
+# Post-hoc Explainability
+
+---
+
+Understandable model of the relation between *inputs* and *outputs*
+
+- SHAP
+- LIME
+
+---
+
+&nbsp;

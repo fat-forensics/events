@@ -13,6 +13,10 @@ __pycache__
 resources/**/*.jpg
 resources/**/*.py
 
+# Quarto
+resources/**/*_files
+resources/**/*.html
+
 # Node
 node_modules
 package-lock.json

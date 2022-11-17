@@ -11,13 +11,21 @@ youtube: https://youtu.be/
 slack: https://fatforensicsevents.slack.com/
 
 exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENCE
   - README.md
+  - resources/README.md
   - resources/*/binder
   - resources/*/notebooks
   - resources/*/paper
   - resources/*/slides
   - resources/*/LICENCE
   - resources/*/README.md
+  - resources/*/*.sh
+
+include:
+  - _quarto
 
 theme: jekyll-theme-hacker
 
