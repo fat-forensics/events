@@ -8,4 +8,4 @@
 -r ../resources/2021_EURO-explainability/slides/requirements.txt
 -r ../resources/2021_TAILOR-WP3/slides/requirements.txt
 -r ../resources/2021_TURING-AI-UK/slides/requirements.txt
--r ../resources/2020_ecml-pkdd/slides/requirements.txt
+-r ../resources/2020_ecml-pkdd/notebooks/requirements.txt
