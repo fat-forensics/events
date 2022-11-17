@@ -2,7 +2,7 @@
 | --------  | -------- |
 | Slides | [![Slides Part 1](https://img.shields.io/badge/part-I-blue)](https://events.fat-forensics.org/_quarto/2022_UNSW-lecture/intro.html) [![Slides Part 2](https://img.shields.io/badge/part-II-blue)](https://events.fat-forensics.org/_quarto/2022_UNSW-lecture/intro_deux.html) |
 | Interactive Case Study | [![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fat-forensics/events/master?filepath=resources%2F2022_UNSW-lecture%2Fslides%2Fsurrogates.md) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fat-forensics/events/blob/master/resources/2022_UNSW-lecture/slides/surrogates.md) |
-| Licence | [![new BSD](https://img.shields.io/github/license/fat-forensics/events.svg)](https://github.com/fat-forensics/events/blob/master/| LICENCE) |
+| Licence | [![new BSD](https://img.shields.io/github/license/fat-forensics/events.svg)](https://github.com/fat-forensics/events/blob/master/LICENCE) |
 
 # Slides (2022 Invited Lecture, UNSW) #
 
