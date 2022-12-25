@@ -172,7 +172,7 @@ For more details please see the event homepage:
 
 ## September 2020 -- Hands-on Tutorial at ECML-PKDD 2020 ##
 
-[![JOSE](https://jose.theoj.org/papers/d58625bd4c600da866522c879986b18f/status.svg)](https://jose.theoj.org/papers/d58625bd4c600da866522c879986b18f)
+[![JOSE](https://jose.theoj.org/papers/10.21105/jose.00175/status.svg)](https://jose.theoj.org/papers/10.21105/jose.00175)
 [![arXiv](https://img.shields.io/badge/arXiv-2209.03813-red.svg)](https://arxiv.org/abs/2209.03813)
 [![ZENODO](https://zenodo.org/badge/DOI/10.5281/zenodo.6395490.svg)](https://doi.org/10.5281/zenodo.6395490)
 
@@ -191,13 +191,18 @@ For more details please see the event homepage:
 To reference this tutorial please use:
 ```bibtex
 @article{sokol2022what,
-  title={What and how of machine learning transparency:
-         {B}uilding bespoke explainability tools with interoperable
-         algorithmic components},
+  title={What and How of Machine Learning Transparency:
+         {Building} Bespoke Explainability Tools with Interoperable
+         Algorithmic Components},
   author={Sokol, Kacper and Hepburn, Alexander and
           Santos-Rodriguez, Raul and Flach, Peter},
-  journal={arXiv preprint arXiv:2209.03813},
+  journal={Journal of Open Source Education},
+  volume={5},
+  number={58},
+  pages={175},
+  publisher={The Open Journal},
   year={2022},
-  doi={10.48550/arXiv.2209.03813}
+  doi={10.21105/jose.00175},
+  url={https://events.fat-forensics.org/2020_ecml-pkdd}
 }
 ```
